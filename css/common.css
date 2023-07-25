@@ -1,8 +1,28 @@
+:root{
+    --blue:#afc0d4;
+    --light-blue:rgb(175, 192, 212, 0.5);
+
+    --beige:#efe8da;
+
+    --white-gray: #e6e8eb;
+    --light-gray: #e6e6e6;
+    --gray: #dcdcdc;
+
+    --black:#000;
+}
+
+
 /* header */
 .header{position:fixed;left:0;top:0;z-index:999;width:100%;height:80px;transition:.3s;}
+.header.blur{backdrop-filter:blur(30px);background-color:rgba(255, 255, 255, 0.5);}
 .header .header-inner{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 15px 0 30px;}
 .header-inner .logo a{display:block;width:80px;height:50px;font-size:0;background:url('../images/logo.png') no-repeat;background-size:100% 100%}
 
 /* gnb */
 .gnb-list{display:flex;align-items:center;}
 .gnb-list li .depth01{padding:0 15px;font-size:1.8rem;font-weight:500;}
+
+/* section */
+section:not(.home){padding:80px 20px 150px;}
+.section-inner{max-width:1280px;width:100%;;margin:0 auto;}
+.section-inner .title{margin-bottom:40px;font-size:4.5rem;font-weight:500;text-align:center;}

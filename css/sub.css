@@ -1,43 +1,61 @@
 /* 메인(home) 페이지 */
-.main-wrap .home{position:relative;width:100%;height:4500px;}
-.main-wrap .home .main-tit-wrap{position:fixed;left:calc(50% - 640px);top:0;width:1280px;height:100vh;margin:0 auto;}
+.main-wrap .home{position:relative;width:100%;height:4000px;background-color:#efe8da;}
+.main-wrap .home .main-tit-wrap{display:flex;;align-items:center;justify-content:space-between;position:fixed;left:calc(50% - 640px);top:0;z-index:10;width:1280px;height:100vh;margin:0 auto;}
 
-.home .main-tit-wrap .main-tit-inner{display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;}
+.main-tit-wrap .emoji-wrap{position:relative;z-index:1;padding:0 55px 0 70px;animation:fadeIn 1s both;animation-delay:.1s;}
 
-.main-tit-wrap .main-tit-inner .emoji-wrap{position:relative;z-index:1;padding:0 55px 0 70px;animation:fadeIn 1s both;animation-delay:.1s;}
+.main-tit-wrap .emoji-wrap:before,
+.main-tit-wrap .emoji-wrap:after{content:'';position:absolute;z-index:2;background-repeat:no-repeat;background-size:100% 100%;}
 
-.main-tit-wrap .main-tit-inner .emoji-wrap:before,
-.main-tit-wrap .main-tit-inner .emoji-wrap:after{content:'';position:absolute;z-index:2;background-repeat:no-repeat;background-size:100% 100%;}
+.main-tit-wrap .emoji-wrap:before{left:0;top:0;width:90px;height:184px;background-image:url('../images/home/bg_emoji_deco_1.png');transform:translateY(25%)}
+.main-tit-wrap .emoji-wrap:after{right:0;top:0;width:73.5px;height:134px;background-image:url('../images/home/bg_emoji_deco_2.png');transform:translateY(50%)}
 
-.main-tit-wrap .main-tit-inner .emoji-wrap:before{left:0;top:0;width:90px;height:184px;background-image:url('../images/home/bg_emoji_deco_1.png');transform:translateY(25%)}
-.main-tit-wrap .main-tit-inner .emoji-wrap:after{right:0;top:0;width:73.5px;height:134px;background-image:url('../images/home/bg_emoji_deco_2.png');transform:translateY(50%)}
-
-.main-tit-inner .emoji-wrap .bg-emoji{position:relative;z-index:1;width:254px;height:232px;background:url('../images/home/bg_circle.png') no-repeat;background-size:100% 100%;}
-.main-tit-inner .emoji-wrap .bg-emoji:after{content:'';position:absolute;left:50%;top:50%;z-index:2;width:150px;height:150px;background:url('../images/home/doeun_emoji.png') no-repeat;background-size:100% 100%;transform:translate(-50%, -50%)}
+.main-tit-wrap .emoji-wrap .bg-emoji{position:relative;z-index:1;width:254px;height:232px;background:url('../images/home/bg_circle.png') no-repeat;background-size:100% 100%;}
+.main-tit-wrap .emoji-wrap .bg-emoji:after{content:'';position:absolute;left:50%;top:50%;z-index:2;width:150px;height:150px;background:url('../images/home/doeun_emoji.png') no-repeat;background-size:100% 100%;transform:translate(-50%, -50%)}
 
 /* 메인 타이틀 */
-.main-tit-wrap .main-tit-inner .main-tit{position:relative;width:calc(100% - 450px);height:100%;}
-.main-tit-inner .main-tit p{overflow:hidden;position:absolute;width:125px;height:120px;text-align:center;}
-.main-tit-inner .main-tit .no-1{right:670px;top:calc(50% - 55px);}
-.main-tit-inner .main-tit .no-2{right:550px;;top:calc(50% - 10px);}
-.main-tit-inner .main-tit .no-3{right:480px;top:calc(50% - 90px);}
-.main-tit-inner .main-tit .no-4{right:400px;top:calc(50% - 10px);}
-.main-tit-inner .main-tit .no-5{right:300px;top:calc(50% + 15px);}
-.main-tit-inner .main-tit .no-6{right:190px;top:calc(50% - 40px);}
-.main-tit-inner .main-tit .no-7{right:75px;top:calc(50% - 70px);}
-.main-tit-inner .main-tit .no-8{right:0;top:calc(50% - 45px);}
+.main-tit-wrap .main-tit{position:relative;width:calc(100% - 450px);height:100%;}
+.main-tit-wrap .main-tit p{overflow:hidden;position:absolute;width:125px;height:120px;text-align:center;}
+.main-tit-wrap .main-tit .no-1{right:670px;top:calc(50% - 55px);}
+.main-tit-wrap .main-tit .no-2{right:550px;;top:calc(50% - 10px);}
+.main-tit-wrap .main-tit .no-3{right:480px;top:calc(50% - 90px);}
+.main-tit-wrap .main-tit .no-4{right:400px;top:calc(50% - 10px);}
+.main-tit-wrap .main-tit .no-5{right:300px;top:calc(50% + 15px);}
+.main-tit-wrap .main-tit .no-6{right:190px;top:calc(50% - 40px);}
+.main-tit-wrap .main-tit .no-7{right:75px;top:calc(50% - 70px);}
+.main-tit-wrap .main-tit .no-8{right:0;top:calc(50% - 45px);}
 
-.main-tit-inner .main-tit span{font-size:11rem;font-weight:500;}
-.main-tit-inner .main-tit span{position:absolute;bottom:-240px;left:0;animation:cu-fadeUp .5s both;}
-.main-tit-inner .main-tit .no-1 span{animation-delay:.2s;}
-.main-tit-inner .main-tit .no-2 span{animation-delay:.3s;}
-.main-tit-inner .main-tit .no-3 span{animation-delay:.2s;}
-.main-tit-inner .main-tit .no-4 span{animation-delay:.5s;}
-.main-tit-inner .main-tit .no-5 span{animation-delay:.4s;}
-.main-tit-inner .main-tit .no-6 span{animation-delay:.7s;}
-.main-tit-inner .main-tit .no-7 span{animation-delay:.4s;}
-.main-tit-inner .main-tit .no-8 span{animation-delay:.6s;}
+.main-tit-wrap .main-tit span{font-size:11rem;font-weight:500;}
+.main-tit-wrap .main-tit span{position:absolute;bottom:-240px;left:0;animation:cu-fadeUp .5s both;}
+.main-tit-wrap .main-tit .no-1 span{animation-delay:.2s;}
+.main-tit-wrap .main-tit .no-2 span{animation-delay:.3s;}
+.main-tit-wrap .main-tit .no-3 span{animation-delay:.2s;}
+.main-tit-wrap .main-tit .no-4 span{animation-delay:.5s;}
+.main-tit-wrap .main-tit .no-5 span{animation-delay:.4s;}
+.main-tit-wrap .main-tit .no-6 span{animation-delay:.7s;}
+.main-tit-wrap .main-tit .no-7 span{animation-delay:.4s;}
+.main-tit-wrap .main-tit .no-8 span{animation-delay:.6s;}
 
+.sub-tit{display:flex;flex-direction:column;align-items:center;justify-content:center;position:sticky;top:0;left:0;z-index:5;width:100%;height:100vh;margin-top:-200px;}
+.sub-tit p{font-size:6rem;font-weight:600;line-height:1.4;opacity:0;transition: translateY 1s;}
+
+
+/* 서브 페이지 */
+
+/* about */
+.about .about-wrap .about-content{display:flex;justify-content:space-between;align-items:center;}
+
+.about-wrap .about-content .img-profile-wrap{}
+.about-wrap .about-content .img-profile-wrap .img-profile{width:250px;height:250px;border-radius:50%;object-fit:cover;}
+
+.about-wrap .about-content .info-wrap{width:calc(100% - 350px);height:100%;border-radius:15px;background-color:var(--white-gray);}
+.about-content .info-wrap .info-inner{padding:50px;}
+.about-content .info-wrap .info-inner .info-title{margin-bottom:30px;font-size:2.5rem;font-weight:500;}
+
+
+
+
+/* 애니메이션 */
 @keyframes cu-fadeUp{
     0% {
         bottom:-240px;
@@ -62,12 +80,6 @@
     0% {
         opacity:0;
     }
-    /*30%{*/
-    /*    opacity:0.3;*/
-    /*}*/
-    /*50%{*/
-    /*    opacity:0.5;*/
-    /*}*/
     100% {
         opacity:1;
     }

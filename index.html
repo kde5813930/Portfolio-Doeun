@@ -5,6 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doeun's portfolio</title>
+    <meta property="og:url" content="http://website.com">
+    <meta property="og:title" content="Doeun's portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/bg_profile.jpg">
+    <meta property="og:description" content="김도은의 포트폴리오 사이트 입니다.">
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
@@ -22,7 +28,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Doeun's portfolio</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -50,26 +55,87 @@
                 <div class="main-wrap">
                     <section class=home>
                         <div class="main-tit-wrap">
-                            <div class="main-tit-inner">
-                                <div class="emoji-wrap">
-                                    <div class="bg-emoji"></div>
-                                </div>
-                                <div class="main-tit">
-                                    <p class="no-1"><span>W</span></p>
-                                    <p class="no-2"><span>E</span></p>
-                                    <p class="no-3"><span>L</span></p>
-                                    <p class="no-4"><span>C</span></p>
-                                    <p class="no-5"><span>O</span></p>
-                                    <p class="no-6"><span>M</span></p>
-                                    <p class="no-7"><span>E</span></p>
-                                    <p class="no-8"><span>!</span></p>
-                                </div>
+                            <div class="emoji-wrap">
+                                <div class="bg-emoji"></div>
                             </div>
+                            <div class="main-tit">
+                                <p class="no-1"><span>W</span></p>
+                                <p class="no-2"><span>E</span></p>
+                                <p class="no-3"><span>L</span></p>
+                                <p class="no-4"><span>C</span></p>
+                                <p class="no-5"><span>O</span></p>
+                                <p class="no-6"><span>M</span></p>
+                                <p class="no-7"><span>E</span></p>
+                                <p class="no-8"><span>!</span></p>
+                            </div>
+                        </div>
+                        <div class="sub-tit">
+                            <p class="no-1">밍키는 귀엽다</p>
+                            <p class="no-2">그것도 아주아주 귀엽다</p>
+                            <p class="no-3">깜찍 그 잡채다🎀</p>
                         </div>
                     </section>
                 </div>
                 <div class="sub-wrap">
-                    <section class="about"></section>
+                    <section class="about">
+                        <div class="about-wrap section-inner">
+                            <h3 class="title">About Me</h3>
+                            <div class="about-content">
+                                <div>
+                                    <div class="img-profile-wrap"><img src="/images/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
+                                    <p class="desc">
+                                        안녕하세요.ㅎㅋㅎㅋㅎㅋㅎㅋㅎㅋㅎㅋ
+                                    </p>
+                                </div>
+                                <div class="info-wrap">
+                                    <div class="info-inner">
+                                        <p class="info-title">My information</p>
+                                        <ul class="info-content-list">
+                                            <li class="info-content">
+                                                <h4 class="content-title">Profile</h4>
+                                                <div class="content-wrap">
+                                                    <dl>
+                                                        <dt>이름</dt>
+                                                        <dd>김도은 / KIM DO EUN</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>생년월일</dt>
+                                                        <dd>1993.04.26</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                            <li class="info-content">
+                                                <h4 class="content-title">History</h4>
+                                                <div class="content-wrap">
+                                                    <dl>
+                                                        <dt>2020.09 - 2021.01</dt>
+                                                        <dd>
+                                                            강남 더 조은 컴퓨터 아카데미
+                                                            UI/UX 웹디자인 웹퍼블리셔 실무자 양성과정 수료
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>2021.06 - 2023.07</dt>
+                                                        <dd>(주)미플즈 근무</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                            <li class="info-content">
+                                                <h4 class="content-title">About Me</h4>
+                                                <ul class="content-list">
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="info-content">
+                                                <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank">
+                                                    이력서 보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section class="project"></section>
                 </div>
             </div>
@@ -79,4 +145,83 @@
         </footer>
     </div>
 </body>
+<script type="text/javascript">
+
+    const mainTitle = document.querySelector(".main-tit-wrap");
+    const subTitle_1 = document.querySelector(".sub-tit .no-1");
+    const subTitle_2 = document.querySelector(".sub-tit .no-2");
+    const subTitle_3 = document.querySelector(".sub-tit .no-3");
+
+    window.addEventListener("scroll", () => {
+        let hei = window.scrollY;
+
+        let textOpacity = hei * -1/1000 + 1;
+        let titleScale = hei * 1/1000 + 1;
+
+        let subTextOpacity = hei * 1/500;
+        let textScroll = hei * -1/5
+
+
+        if (hei <= 0) {
+            mainTitle.style.opacity = "1";
+            mainTitle.style.scale = "1";
+        }
+
+        if (hei > 0) {
+            mainTitle.style.opacity = textOpacity;
+            mainTitle.style.scale = titleScale;
+        }
+
+        if (hei > 1000){
+            mainTitle.style.opacity = 0;
+            mainTitle.style.scale = 2;
+            mainTitle.style.display = "none";
+
+            subTitle_1.style.opacity = subTextOpacity - 2;
+            subTitle_1.style.transform = `translateY(${textScroll + 300}px)`;
+        }   else {
+            mainTitle.style.display = "flex";
+            subTitle_1.style.opacity = 0;
+        }
+
+
+        if (hei > 1500){
+            subTitle_1.style.transform = `translateY(0)`;
+            subTitle_2.style.opacity = subTextOpacity - 3;
+            subTitle_2.style.transform = `translateY(${textScroll + 400}px)`;
+        } else {
+            subTitle_2.style.opacity = 0;
+        }
+
+
+        if (hei > 2000){
+            subTitle_2.style.transform = `translateY(0)`;
+            subTitle_3.style.opacity = subTextOpacity - 4;
+            subTitle_3.style.transform = `translateY(${textScroll + 500}px)`;
+        } else {
+            subTitle_3.style.opacity = 0;
+        }
+
+        if (hei > 2500){
+            subTitle_3.style.transform = `translateY(0)`;
+        }
+
+
+
+    });
+
+
+</script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
