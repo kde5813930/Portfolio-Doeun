@@ -26,3 +26,5 @@
 section:not(.home){padding:80px 20px 150px;}
 .section-inner{max-width:1280px;width:100%;;margin:0 auto;}
 .section-inner .title{margin-bottom:40px;font-size:4.5rem;font-weight:500;text-align:center;}
+
+.desc{line-height:1.3;word-break:keep-all;}
