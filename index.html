@@ -33,7 +33,10 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <script defer src="./js/main.js"></script>
+    <script src="./assets/jquery-3.6.0.min.js"></script>
+    <script src="./assets/aos.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -77,85 +80,131 @@
                     </section>
                 </div>
                 <div class="sub-wrap">
-                    <section class="about">
+                    <section class="about" data-aos="fade-up" data-aos-delay="150">
+                        <div class="about-bg" style="background-image:url('images/about/bg_about.png')"></div>
                         <div class="about-wrap section-inner">
-                            <h3 class="title">About Me</h3>
                             <div class="about-content">
-                                <div class="img-wrap">
+                                <div class="about-title-wrap" data-aos="fade-right" data-aos-delay="300">
+                                    <h3 class="main-title">About Me</h3>
                                     <div class="img-profile-wrap"><img src="/images/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
-                                    <p class="desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid commodi cupiditate dignissimos dolores eaque, error esse est exercitationem, in laborum nostrum odit perferendis provident, repellendus reprehenderit sequi sint veritatis?
-                                    </p>
                                 </div>
-                                <div class="info-wrap">
-                                    <div class="info-inner">
-                                        <p class="info-title">My information</p>
-                                        <ul class="info-content-list">
-                                            <li class="info-content">
-                                                <h4 class="content-title profile">Profile</h4>
-                                                <div class="content-wrap">
-                                                    <dl class="content">
-                                                        <dt>이름</dt>
-                                                        <dd>김도은 / KIM DO EUN</dd>
-                                                    </dl>
-                                                    <dl class="content">
-                                                        <dt>생년월일</dt>
-                                                        <dd>1993.04.26</dd>
-                                                    </dl>
-                                                </div>
-                                            </li>
-                                            <li class="info-content">
-                                                <h4 class="content-title history">History</h4>
-                                                <div class="content-wrap">
-                                                    <dl class="content">
-                                                        <dt>2020.09 - 2021.01</dt>
-                                                        <dd>
-                                                            강남 더 조은 컴퓨터 아카데미
-                                                            UI/UX 웹디자인 웹퍼블리셔 실무자 양성과정 수료
-                                                        </dd>
-                                                    </dl>
-                                                    <dl class="content">
-                                                        <dt>2021.06 - 2023.07</dt>
-                                                        <dd>(주)미플즈 근무</dd>
-                                                    </dl>
-                                                </div>
-                                            </li>
-                                            <li class="info-content">
-                                                <h4 class="content-title contact">Contact</h4>
-                                                <div class="content-wrap">
-                                                    <dl class="content">
-                                                        <dt>Tel</dt>
-                                                        <dd>010-8561-5813</dd>
-                                                    </dl>
-                                                    <dl class="content">
-                                                        <dt>E-Mail</dt>
-                                                        <dd>kde5813@gmail.com</dd>
-                                                    </dl>
-                                                </div>
-                                            </li>
-                                            <li class="info-content">
-                                                <h4 class="content-title about-me">About Me</h4>
-                                                <ul class="content-list">
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolor dolore</li>
-                                                    <li>eligendi eveniet ex nam officiis quoatione recusandae tempora.</li>
-                                                    <li>Ad blanditiis consectetur dicta esse ipsa labore maiores neque tenetur.</li>
-                                                </ul>
-                                            </li>
-                                            <li class="info-content">
-                                                <div class="info-btn-wrap">
-                                                    <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="view-link">
-                                                        이력서 보기 🙌</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <ul class="about-info-list" data-aos="fade-left" data-aos-delay="550">
+                                    <li class="about-info">
+                                        <p class="desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid autem consequuntur debitis, et ex iure labore minus, mollitia neque nesciunt nostrum omnis quaerat quas, quis quos repellendus suscipit.
+                                        </p>
+                                    </li>
+                                    <li class="about-info">
+                                        <h4 class="info-title profile">Profile</h4>
+                                        <div class="info-box">
+                                            <dl class="info">
+                                                <dt>이름</dt>
+                                                <dd>김도은 / KIM DO EUN</dd>
+                                            </dl>
+                                            <dl class="info">
+                                                <dt>생년월일</dt>
+                                                <dd>1993.04.26</dd>
+                                            </dl>
+                                        </div>
+                                    </li>
+                                    <li class="about-info">
+                                        <h4 class="info-title history">History</h4>
+                                        <div class="info-box">
+                                            <dl class="info">
+                                                <dt>2016.11 - 2018.04</dt>
+                                                <dd>
+                                                    (주)동성삼우국제여행사 근무
+                                                </dd>
+                                            </dl>
+                                            <dl class="info">
+                                                <dt>2019.01 - 2020.04</dt>
+                                                <dd>
+                                                    (주)온라인투어 근무
+                                                </dd>
+                                            </dl>
+                                            <dl class="info">
+                                                <dt>2020.09 - 2021.01</dt>
+                                                <dd>
+                                                    강남 더 조은 컴퓨터 아카데미
+                                                    UI/UX 웹디자인 웹퍼블리셔 실무자 양성과정 수료
+                                                </dd>
+                                            </dl>
+                                            <dl class="info">
+                                                <dt>2021.06 - 2023.07</dt>
+                                                <dd>(주)미플즈 UI/UX Tech 근무</dd>
+                                            </dl>
+                                        </div>
+                                    </li>
+                                    <li class="about-info">
+                                        <h4 class="info-title contact">Contact</h4>
+                                        <div class="info-box">
+                                            <dl class="info">
+                                                <dt>Tel</dt>
+                                                <dd>010-8561-5813</dd>
+                                            </dl>
+                                            <dl class="info">
+                                                <dt>E-Mail</dt>
+                                                <dd>kde5813@gmail.com</dd>
+                                            </dl>
+                                        </div>
+                                    </li>
+                                    <li class="about-info">
+                                        <h4 class="info-title about-me">About Me</h4>
+                                        <div class="about-desc-wrap">
+                                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolor dolore</p>
+                                            <p class="desc">eligendi eveniet ex nam officiis quoatione recusandae tempora.</p>
+                                            <p class="desc">Ad blanditiis consectetur dicta esse ipsa labore maiores neque tenetur.</p>
+                                        </div>
+                                    </li>
+                                    <li class="about-info">
+                                        <h4 class="info-title resume">MY Resume</h4>
+                                        <div class="info-btn-wrap">
+                                            <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="view-link">
+                                                이력서 보기 🙌</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </section>
-                    <section class="project section-inner">
-                        <h3 class="title">About Me</h3>
-
+                    <section class="project">
+                        <div class="project-inner section-inner">
+                            <h2 class="main-title">project</h2>
+                            <div class="project-list-wrap">
+                                <ul class="project-list">
+                                    <li class="project-box">
+                                        <a href="javascript:void(0)">
+                                            <h3>현대 자동차 채용 사이트</h3>
+                                            <p></p>
+                                        </a>
+                                    </li>
+                                    <li class="project-box">
+                                        <a href="javascript:void(0)">
+                                            <h3>기아 자동차 채용 사이트</h3>
+                                            <p></p>
+                                        </a>
+                                    </li>
+                                    <li class="project-box">
+                                        <a href="javascript:void(0)">
+                                            <h3>국민은행 국민비서 (구삐) 모바일 앱</h3>
+                                            <p></p>
+                                        </a>
+                                    </li>
+                                    <li class="project-box">
+                                        <a href="javascript:void(0)">
+                                            <h3>국민비서 관리자 사이트</h3>
+                                            <p></p>
+                                        </a>
+                                    </li>
+                                    <li class="project-box">
+                                        <a href="javascript:void(0)">
+                                            <h3>SK innovation 채용 사이트</h3>
+                                            <p></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -167,6 +216,11 @@
 </body>
 <script type="text/javascript">
 
+    AOS.init({
+        duration: 800,
+    });
+
+    // 메인 스크롤 이벤트
     const mainTitle = document.querySelector(".main-tit-wrap");
     const subTitle_1 = document.querySelector(".sub-tit .no-1");
     const subTitle_2 = document.querySelector(".sub-tit .no-2");
