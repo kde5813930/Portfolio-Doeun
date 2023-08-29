@@ -48,16 +48,16 @@
 .about .about-bg{position:sticky;left:0;top:0;z-index:-1;width:100%;height:100vh;background-repeat:no-repeat;background-size:cover;background-position:center center;}
 .about .about-bg:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(255, 255, 255, 0.5)}
 
-.about .about-wrap{position:absolute;left:calc(50% - 640px);top:150px;padding:0 20px}
-.about .about-wrap .about-content{display:flex;justify-content:space-between;}
+.about .about-wrap{position:absolute;left:calc(50% - 640px);top:0;padding:0 20px;}
+.about .about-wrap .about-content{position:relative;display:flex;justify-content:space-between;}
 
-.about-wrap .about-content .about-title-wrap{position:sticky;top:150px;height:100%;padding-bottom:15%;}
+.about-wrap .about-content .about-title-wrap{position:sticky;top:0;height:100%;padding:150px 0 18% 0;}
 
 .about-content .about-title-wrap .title{font-size:4rem;}
 .about-content .about-title-wrap .img-profile-wrap{margin-bottom:20px;}
 .about-content .about-title-wrap .img-profile-wrap .img-profile{width:350px;height:350px;border-radius:50%;object-fit:cover;}
 
-.about-wrap .about-content .about-info-list{width:calc(100% - 600px);height:100%;}
+.about-wrap .about-content .about-info-list{width:calc(100% - 600px);height:100%;padding-top:250px;}
 
 .about-content .about-info-list .about-info{padding:50px 35px;border-radius:15px;
     background: rgb(239,232,218);
@@ -125,10 +125,30 @@
 /*.info-content .info-btn-wrap .view-link:hover:after{width:calc(100% - 32px);}*/
 
 
-.project{width:100%;height:100vh;display:flex;}
+.project{width:100%;height:100%;}
 
 .project-img-wrap{background-color:var(--blue);width:100%;height:100%;}
 .project-desc-wrap{background-color:var(--white-gray);width:100%;height:100%;}
+
+.project-list-wrap .project-list{display:flex;flex-wrap:wrap;}
+
+.project-list-wrap .project-list .project-box{position:relative;;width:calc(33.3% - 15px);margin:0 15px 15px 0;}
+/*.project-list-wrap .project-list .project-box:hover{border:1.5px solid var(--blue);background-color:rgba(239, 232, 218, 0.5);}*/
+
+.project-list-wrap .project-list .project-box:before,
+.project-list-wrap .project-list .project-box:after{content:'';position:absolute;background-repeat:no-repeat;background-size:100% 100%;}
+
+.project-list-wrap .project-list .project-box:before{left:30px;top:30px;width:30px;height:30px;background-image:url('../images/project/icon_folder.svg');}
+
+.project-list-wrap .project-list .project-box:after{right:30px;bottom:30px}
+.project-list-wrap .project-list .project-box.desk-top:after{width:40px;height:25px;background-image:url('../images/project/icon_desktop.svg');}
+.project-list-wrap .project-list .project-box.phone:after{width:25px;height:35px;background-image:url('../images/project/icon_mobile.svg');}
+
+.project-list .project-box .box-inner{display:block;width:100%;height:100%;padding:100px 50px;border:2.5px solid transparent;border-radius:10px;background-color:var(--beige);}
+.project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
+
+.project-list .project-box .box-inner .title{margin-bottom:10px;font-size:1.8rem;font-weight:600;line-height:1.4;}
+
 
 /* 애니메이션 */
 @keyframes cu-fadeUp{
