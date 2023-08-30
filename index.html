@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="lock">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -42,12 +42,12 @@
     <div class="wrap">
         <header class="header">
             <div class="header-inner">
-                <h1 class="logo"><a href="javascript:void(0)">logo</a></h1>
+                <h1 class="logo"><a href="#Home">logo</a></h1>
                 <nav class="gnb">
                     <ul class="gnb-list">
-                        <li><a href="javascript:void(0)" class="depth01">Home</a></li>
-                        <li><a href="javascript:void(0)" class="depth01">About</a></li>
-                        <li><a href="javascript:void(0)" class="depth01">Project</a></li>
+                        <li><a href="#Home" class="depth01">Home</a></li>
+                        <li><a href="#About" class="depth01">About</a></li>
+                        <li><a href="#Project" class="depth01">Project</a></li>
                         <li><a href="javascript:void(0)" class="depth01">Contact</a></li>
                     </ul>
                 </nav>
@@ -56,7 +56,7 @@
         <main class="container">
             <div class="wrap">
                 <div class="main-wrap">
-                    <section class=home>
+                    <section id="Home" class=home>
                         <div class="main-tit-wrap">
                             <div class="emoji-wrap">
                                 <div class="bg-emoji"></div>
@@ -80,15 +80,15 @@
                     </section>
                 </div>
                 <div class="sub-wrap">
-                    <section class="about" data-aos="fade-up" data-aos-delay="200">
+                    <section id="About" class="about">
                         <div class="about-bg" style="background-image:url('images/about/bg_about.png')"></div>
                         <div class="about-wrap section-inner">
-                            <div class="about-content">
-                                <div class="about-title-wrap" data-aos="zoom-in">
+                            <div class="about-content" data-aos="fade-right">
+                                <div class="about-title-wrap">
                                     <h3 class="main-title">About Me</h3>
                                     <div class="img-profile-wrap"><img src="/images/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
                                 </div>
-                                <ul class="about-info-list"  data-aos="zoom-in-left" data-aos-delay="150" data-aos-offset="200">
+                                <ul class="about-info-list"  data-aos="zoom-in-left" data-aos-delay="300" data-aos-offset="50">
                                     <li class="about-info">
                                         <p class="desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid autem consequuntur debitis, et ex iure labore minus, mollitia neque nesciunt nostrum omnis quaerat quas, quis quos repellendus suscipit.
@@ -159,7 +159,7 @@
                                     <li class="about-info">
                                         <h4 class="info-title resume">MY Resume</h4>
                                         <div class="info-btn-wrap">
-                                            <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="view-link">
+                                            <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="btn-primary btn-underline">
                                                 이력서 보기 🙌</a>
                                         </div>
                                     </li>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="project">
+                    <section id="Project" class="project">
                         <div class="project-inner section-inner">
                             <h2 class="main-title" data-aos="fade-up">project</h2>
                             <div class="project-list-wrap">
@@ -212,6 +212,28 @@
         <footer>
 
         </footer>
+    </div>
+    <div class="modal-wrap active">
+        <section class="modal">
+            <header class="modal-header">
+                <h2 class="title">현대 자동차 채용 사이트 입니다.</h2>
+            </header>
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <div class="modal-img-wrap"><img src="images/project/img_monitor.png" alt=""></div>
+                    <div class="modal-desc-wrap">
+                        <p class="desc">
+                            html / css / javascript / jquery 를 이용하여 작업하였습니다.
+                        </p>
+                        <p class="test">
+                            기여도 : 메인페이지 50% / 서브페이지 100%
+                        </p>
+                        <a href="javascript:void(0)" class="btn-primary btn-underline">홈페이지 설명 바로가기</a>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn-modal-close">close</button>
+        </section>
     </div>
 </body>
 <script type="text/javascript">

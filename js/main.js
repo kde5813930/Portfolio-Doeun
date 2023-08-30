@@ -1,5 +1,6 @@
 'use strict'
 
+// 헤더 블러 처리
 const header = document.querySelector(".header")
 
 window.addEventListener("scroll", () => {
@@ -11,5 +12,18 @@ window.addEventListener("scroll", () => {
         header.classList.add("blur");
     }
 
-
 });
+
+// 모달 close
+const $container = document.querySelector("html");
+const modalBtn = document.querySelector(".btn-modal-close");
+
+modalBtn.addEventListener("click", (e) => {
+     const $target = e.target;
+     const $targetParent = $target.parentNode.parentNode;
+
+    $container.classList.remove("lock");
+    $targetParent.classList.remove("active");
+})
+
+
