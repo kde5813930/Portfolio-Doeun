@@ -1,43 +1,53 @@
-{
-    "data01" : {
+[
+    {
+        "name": "hyundai",
         "title" : "현대 자동차 인재채용 사이트 입니다.",
-        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. 메인페이지는 서브로 작업하였으며, 서브페이지 와 모달등의 페이지는 메인으로 작업하였습니다.",
+        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. <br /> 메인페이지는 서브로 작업하였으며, 서브페이지 와 모달등의 페이지는 메인으로 작업하였습니다.",
         "img" : "images/project/img_monitor.png",
         "alt" : "현대자동차 홈페이지 대표 사진",
+        "contributions": "기여도 - 메인페이지 50% / 서브페이지 100%",
         "link" : "https://talent.hyundai.com/main/main.hc",
         "linkDesc" : "홈페이지 바로가기"
     },
-    "data02" : {
+    {
+        "name": "kia",
         "title" : "기아 자동차 인재채용 사이트 입니다.",
-        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. 메인페이지는 서브로 작업하였으며, 서브페이지 와 모달등의 페이지는 메인으로 작업하였습니다.",
+        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. <br /> 메인페이지는 서브로 작업하였으며, 서브페이지 와 모달등의 페이지는 메인으로 작업하였습니다.",
         "img" : "images/project/img_monitor.png",
         "alt" : "기아 홈페이지 대표 사진",
-        "link" : "https://talent.hyundai.com/main/main.hc",
+        "contributions": "기여도 - 메인페이지 50% / 서브페이지 100%",
+        "link" : "https://career.kia.com/main/main.kc",
         "linkDesc" : "홈페이지 바로가기"
     },
-    "data03" : {
+    {
+        "name": "kukMin",
         "title" : "국민은행 국민비서 (구삐) 어플리케이션 입니다.",
-        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. 모든 메인/서브 페이지 메인으로 작업하였습니다.",
+        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. <br /> 모든 메인/서브 페이지 메인으로 작업하였습니다.",
         "img" : "images/project/img_monitor.png",
         "alt" : "국민은행 국민비서 (구삐) 대표 사진",
+        "contributions": "기여도 - 메인페이지 100% / 서브페이지 100%",
         "link" : "https://talent.hyundai.com/main/main.hc",
         "linkDesc" : "홈페이지 설명 바로가기"
     },
-    "data04" : {
+    {
+        "name": "kukMinAdmin",
         "title" : "국민은행 국민비서 (구삐) 관리자 사이트 입니다. ",
-        "desc" : "html / css / javascript 를 이용하여 작업하였습니다. 모든 메인/서브 페이지 메인으로 작업하였습니다.",
+        "desc" : "html / css / javascript 를 이용하여 작업하였습니다. <br /> 모든 메인/서브 페이지 메인으로 작업하였습니다.",
         "img" : "images/project/img_monitor.png",
-        "alt" : "현대자동차 홈페이지 대표 사진",
+        "alt" : "국민은행 국민비서 관리자 대표 사진",
+        "contributions": "기여도 - 메인페이지 100% / 서브페이지 100%",
         "link" : "https://talent.hyundai.com/main/main.hc",
         "linkDesc" : "홈페이지 설명 바로가기"
     },
-    "data05" : {
+    {
+        "name": "sk",
         "title" : "sk innovation 인재채용 사이트 입니다.",
-        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. 메인과 people 페이지 제외한 모든 페이지는 메인으로 작업하였습니다.",
+        "desc" : "html / css / javascript / jquery 를 이용하여 작업하였습니다. <br /> 메인과 people 페이지 제외한 모든 페이지는 메인으로 작업하였습니다.",
         "img" : "images/project/img_monitor.png",
         "alt" : "sk innovation 채용 홈페이지 대표 사진",
+        "contributions": "기여도 - 메인, people 페이지 제외한 모든 페이지 100%",
         "link" : "https://recruit.skinnovation.com/ui/index.do",
         "linkDesc" : "홈페이지 바로가기"
     }
-}
+]
 

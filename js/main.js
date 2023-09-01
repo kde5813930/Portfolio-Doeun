@@ -15,15 +15,15 @@ window.addEventListener("scroll", () => {
 });
 
 // 모달 close
-const $container = document.querySelector("html");
-const modalBtn = document.querySelector(".btn-modal-close");
+document.addEventListener("click", (e) => {
+    if (e.target.className === "btn-modal-close") {
 
-modalBtn.addEventListener("click", (e) => {
-     const $target = e.target;
-     const $targetParent = $target.parentNode.parentNode;
+        let $html = document.querySelector("html");
+        const modalBtn = document.querySelector(".btn-modal-close");
 
-    $container.classList.remove("lock");
-    $targetParent.classList.remove("active");
-})
+        modalBtn.parentNode.parentNode.remove();
+        $html.classList.remove("lock");
 
+    }
+});
 
