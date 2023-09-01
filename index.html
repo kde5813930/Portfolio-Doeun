@@ -184,7 +184,7 @@
                                             <p class="desc">html / css / javascript 사용하여 반응형 웹사이트 구축 하였습니다.</p>
                                         </a>
                                     </li>
-                                    <li class="project-box phone" data-aos="fade-up" data-aos-delay="300" data-aos-offset="50">
+                                    <li class="project-box mobile" data-aos="fade-up" data-aos-delay="300" data-aos-offset="50">
                                         <a href="javascript:void(0)" class="box-inner" data-name="kukMin">
                                             <h3 class="title">국민은행 국민비서 (구삐) 모바일 앱</h3>
                                             <p class="desc">html / css / javascript 사용하여 반응형 웹사이트 구축 하였습니다.</p>
@@ -312,6 +312,7 @@
 
     const container = document.querySelector(".wrap")
     const projectBox = document.querySelectorAll(".project-box .box-inner");
+    const modalImgWrap = document.querySelector(".modal-img-wrap");
 
     fetch("data.json")//json파일 읽어오기
 
@@ -327,15 +328,17 @@
 
                         if (element.name === projectName){
                             containerLock();
+
                             container.insertAdjacentHTML("beforeend", `
                                 <div class="modal-wrap">
-                                    <section class="modal">
+                                    <section class="modal ${element.name}">
                                         <header class="modal-header">
                                             <h2 class="title">${element.title}</h2>
                                         </header>
                                         <div class="modal-content">
                                             <div class="modal-inner">
-                                                <div class="modal-img-wrap"><img src="images/project/img_monitor.png" alt="${element.alt}"></div>
+                                                <div class="modal-img-wrap"
+                                                ><img src="${element.image}" alt="${element.alt}"></div>
                                                 <div class="modal-desc-wrap">
                                                     <p class="desc">${element.desc}</p>
                                                     <p class="test">${element.contributions}</p>
@@ -350,9 +353,11 @@
                         } else{
                             return false;
                         }
+
                     });
+
                 });
-            })
+            });
 
 
             // let html = '';
