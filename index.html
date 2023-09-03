@@ -1,4 +1,4 @@
-`<!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -11,32 +11,17 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="/images/bg_profile.jpg">
     <meta property="og:description" content="김도은의 포트폴리오 사이트 입니다.">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="/manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
-    <script defer src="./js/main.js"></script>
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/aos.js"></script>
+    <script defer src="./js/main.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -86,7 +71,7 @@
                             <div class="about-content" data-aos="fade-right">
                                 <div class="about-title-wrap">
                                     <h3 class="main-title">About Me</h3>
-                                    <div class="img-profile-wrap"><img src="/images/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
+                                    <div class="img-profile-wrap"><img src="/images/project/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
                                 </div>
                                 <ul class="about-info-list"  data-aos="zoom-in-left" data-aos-delay="300" data-aos-offset="50">
                                     <li class="about-info">
@@ -303,16 +288,9 @@
         }
     });
 
-    function containerLock(){
-        let $html = document.querySelector("html");
-
-        $html.classList.add("lock");
-    }
-
-
+    let $html = document.querySelector("html");
     const container = document.querySelector(".wrap")
     const projectBox = document.querySelectorAll(".project-box .box-inner");
-    const modalImgWrap = document.querySelector(".modal-img-wrap");
 
     fetch("data.json")//json파일 읽어오기
 
@@ -320,14 +298,13 @@
         .then((data) => {
 
             data.forEach((element) => {
-
                 projectBox.forEach((boxes) => {
                     boxes.addEventListener("click", (e) => {
                         const target = e.currentTarget;
                         let projectName = target.dataset.name;
 
                         if (element.name === projectName){
-                            containerLock();
+                            $html.classList.add("lock");
 
                             container.insertAdjacentHTML("beforeend", `
                                 <div class="modal-wrap">
@@ -374,16 +351,3 @@
         });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-`

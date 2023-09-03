@@ -140,7 +140,7 @@
 
 .project-list-wrap .project-list .project-box:after{right:30px;bottom:30px}
 .project-list-wrap .project-list .project-box.desk-top:after{width:40px;height:25px;background-image:url('../images/project/icon_desktop.svg');}
-.project-list-wrap .project-list .project-box.phone:after{width:25px;height:35px;background-image:url('../images/project/icon_mobile.svg');}
+.project-list-wrap .project-list .project-box.mobile:after{width:25px;height:35px;background-image:url('../images/project/icon_mobile.svg');}
 
 .project-list .project-box .box-inner{display:block;width:100%;height:100%;padding:100px 50px;border:2.5px solid transparent;border-radius:10px;background-color:var(--beige);}
 .project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
@@ -190,7 +190,7 @@
 
 .modal-wrap{display:flex;align-items:center;justify-content:center;position:fixed;left:0;top:0;right:0;z-index:1000;width:100%;height:100%;background-color:rgba(0,0,0,0.7);}
 
-.modal-wrap .modal{overflow-y:auto;position:relative;z-index:5000;max-width:950px;width:100%;max-height:500px;height:100%;margin:auto;padding:80px 50px 50px;border:1px solid #c6cbd0;background-color:#ebebeb;}
+.modal-wrap .modal{overflow-y:auto;position:relative;z-index:5000;max-width:950px;width:100%;max-height:500px;height:100%;margin:auto;padding:80px 50px 50px;border:1px solid #c6cbd0;border-radius:10px;background-color:#ebebeb;}
 
 .modal-wrap .modal .modal-header{margin-bottom:45px;}
 .modal .modal-header .title{font-size:2rem;font-weight:500;text-align:center;}
@@ -200,9 +200,9 @@
 .modal .modal-inner .modal-img-wrap{width:450px;margin-right:80px;}
 .modal.kukMin .modal-inner .modal-img-wrap{width:150px;}
 
-.modal .modal-inner .modal-img-wrap img{max-width:100%;}
+.modal .modal-inner .modal-img-wrap img{max-width:100%;width:300px;}
 
-.modal .modal-inner .modal-desc-wrap{}
+.modal .modal-inner .modal-desc-wrap{width:calc(100% - 450px);}
 .modal-inner .modal-desc-wrap .desc{margin-bottom:40px;}
 .modal-inner .modal-desc-wrap .test{margin-bottom:70px;}
 
