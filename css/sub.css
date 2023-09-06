@@ -43,7 +43,7 @@
 /* 서브 페이지 */
 
 /* about */
-.about{position:relative;width:100%;height:2000px;}
+.about{position:relative;width:100%;height:2100px;}
 
 .about .about-bg{position:sticky;left:0;top:0;z-index:-1;width:100%;height:100vh;background-repeat:no-repeat;background-size:cover;background-position:center center;}
 .about .about-bg:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(255, 255, 255, 0.5)}
@@ -54,7 +54,6 @@
 .about-wrap .about-content .about-title-wrap{position:sticky;top:0;height:100%;padding:150px 0 18% 0;}
 
 .about-content .about-title-wrap .title{font-size:4rem;}
-.about-content .about-title-wrap .img-profile-wrap{margin-bottom:20px;}
 .about-content .about-title-wrap .img-profile-wrap .img-profile{width:350px;height:350px;border-radius:50%;object-fit:cover;}
 
 .about-wrap .about-content .about-info-list{width:calc(100% - 600px);height:100%;padding-top:250px;}
@@ -67,11 +66,11 @@
 .about-info-list .about-info .info-title{position:relative;margin-bottom:30px;padding-left:30px;font-size:2rem;}
 
 .about-info-list .about-info .info-title:before{content:'';display:inline-block;position:absolute;left:0;top:calc(50% - 11px);width:20px;height:22px;background-repeat:no-repeat;background-position:50% 50%;}
-.about-info-list .about-info .info-title.profile:before{background-image:url('../images/about/icon_idCard.svg');}
-.about-info-list .about-info .info-title.history:before{background-image:url('../images/about/icon_laptopCode.svg');}
-.about-info-list .about-info .info-title.contact:before{background-image:url('../images/about/icon_user.svg');}
-.about-info-list .about-info .info-title.about-me:before{background-image:url('../images/about/icon_smile.svg');}
-.about-info-list .about-info .info-title.resume:before{background-image:url('../images/about/icon_file.svg');}
+.about-info-list .about-info .info-title.info-profile:before{background-image:url('../images/about/icon_idCard.svg');}
+.about-info-list .about-info .info-title.info-history:before{background-image:url('../images/about/icon_laptopCode.svg');}
+.about-info-list .about-info .info-title.info-contact:before{background-image:url('../images/about/icon_user.svg');}
+.about-info-list .about-info .info-title.info-about-me:before{background-image:url('../images/about/icon_smile.svg');}
+.about-info-list .about-info .info-title.info-resume:before{background-image:url('../images/about/icon_file.svg');}
 
 .about-info-list .about-info .info-box{}
 
@@ -79,8 +78,8 @@
 .about-info .info-box .info:last-child{margin-bottom:0;}
 .about-info .info-box .info dt{width:100px;}
 
-.about-info .history + .info-box .info{display:block;}
-.about-info .history + .info-box .info dt{width:100%;margin-bottom:8px;}
+.about-info .info-history + .info-box .info{display:block;}
+.about-info .info-history + .info-box .info dt{width:100%;margin-bottom:8px;}
 
 .about-info-list .about-info .about-desc-wrap{}
 .about-info .about-desc-wrap .desc{position:relative;margin-bottom:5px;padding-left:25px;}
@@ -90,43 +89,8 @@
 .about-info-list .about-info .info-btn-wrap{}
 
 
-
-/*.about-content .info-wrap .info-inner{position:relative;padding:50px;}*/
-/*.about-content .info-wrap .info-inner .info-title{margin-bottom:60px;font-size:2.5rem;font-weight:500;}*/
-
-/*.about-content .info-wrap .info-inner .info-content-list{display:flex;flex-wrap:wrap;}*/
-
-/*.info-inner .info-content-list .info-content:not(:last-of-type){margin-bottom:40px;width:50%;}*/
-
-/*.info-content-list .info-content .content-title{position:relative;margin-bottom:15px;padding-left:25px;font-size:2rem;}*/
-
-/*.info-content-list .info-content .content-title:before{content:'';display:inline-block;position:absolute;left:0;top:calc(50% - 11px);height:22px;background-repeat:no-repeat;background-position:50% 50%;}*/
-/*.info-content-list .info-content .content-title.profile:before{width:20px;background-image:url('../images/about/icon_idCard.svg');}*/
-/*.info-content-list .info-content .content-title.history:before{width:20px;background-image:url('../images/about/icon_laptopCode.svg');}*/
-/*.info-content-list .info-content .content-title.contact:before{width:20px;background-image:url('../images/about/icon_user.svg');}*/
-/*.info-content-list .info-content .content-title.about-me:before{width:20px;background-image:url('../images/about/icon_smile.svg');}*/
-
-/*.info-content-list .info-content .content-list li{position:relative;margin-bottom:5px;padding-left:20px;}*/
-/*.info-content-list .info-content .content-list li:before{content:'';display:inline-block;position:absolute;left:0;top:calc(50% - 7.5px);width:15px;height:15px;background:url('../images/common/icon_check.svg') 50% 50% no-repeat;}*/
-
-/*.info-content-list .info-content .content-wrap{word-break:keep-all;}*/
-
-/*.info-content .content-wrap .content{display:flex;justify-content:space-between;flex-wrap:wrap;}*/
-/*.info-content .content-wrap .content:not(:last-of-type){margin-bottom:10px;}*/
-
-/*.info-content .content-wrap .content dt{width:130px;line-height:1.4;}*/
-/*.info-content .content-wrap .content dd{width:calc(100% - 140px);line-height:1.4;}*/
-
-/*.info-content .info-btn-wrap{position:absolute;top:50px;right:50px}*/
-/*.info-content .info-btn-wrap .view-link{display:inline-block;position:relative;padding:10px 15px;border:1.5px solid var(--black);background-color:var(--beige);font-weight:600;}*/
-/*.info-content .info-btn-wrap .view-link:after{content:'';position:absolute;left:15px;bottom:7px;width:0;height:1px;background-color:var(--black);opacity:0.8;transition:all .3s ease;}*/
-/*.info-content .info-btn-wrap .view-link:hover:after{width:calc(100% - 32px);}*/
-
-
+/* project */
 .project{width:100%;height:100%;}
-
-.project-img-wrap{background-color:var(--blue);width:100%;height:100%;}
-.project-desc-wrap{background-color:var(--white-gray);width:100%;height:100%;}
 
 .project-list-wrap .project-list{display:flex;flex-wrap:wrap;}
 
@@ -146,6 +110,25 @@
 .project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
 
 .project-list .project-box .box-inner .title{margin-bottom:25px;font-size:1.8rem;font-weight:600;line-height:1.4;}
+
+
+/* contact */
+.contact{background-color:var(--light-gray);}
+.contact .section-inner{display:flex;justify-content:space-between;align-items:center;}
+
+.contact .section-inner .contact-img-wrap{display:flex;justify-content:center;align-items:center;width:300px;height:300px;background-color:var(--beige);border-radius:50%;}
+.section-inner .contact-img-wrap img{width:150px;height:auto;margin-top:-15px;}
+
+.contact .section-inner .field-wrap{width:calc(100% - 400px);border-radius:10px;background-color:var(--blue);}
+
+.section-inner .field-wrap .field-inner{padding:50px;}
+
+.field-wrap .field-inner .field-box{display:flex;align-items:center;margin-bottom:40px;}
+.field-wrap .field-inner .field-box:last-of-type{margin-bottom:0;}
+
+.field-wrap .field-inner .field-box label{display:inline-block;width:150px;font-weight:600;color:#fff;}
+.field-wrap .field-inner .field-box textarea{width:calc(100% - 150px)}
+
 
 
 /* 애니메이션 */
@@ -207,3 +190,85 @@
 .modal-inner .modal-desc-wrap .test{margin-bottom:70px;}
 
 .modal-wrap .modal .btn-modal-close{position:absolute;top:30px;right:30px;width:30px;height:30px;background:url('../images/common/btn_close.svg') center no-repeat;background-size:100% 100%;font-size:0;}
+
+
+
+/*:*:*:*:*:*:*: MOBILE  *:*:*:*:*:*:*:*/
+@media all and (min-width:0) and (max-width:1280px) {
+
+    /* about */
+    .about-content .about-title-wrap .img-profile-wrap .img-profile{width:270px;height:270px}
+    .about-info .info-box .info dt,
+    .about-info .info-box .info dd{font-size:1.4rem;}
+
+
+    /* project */
+    .project-list .project-box .box-inner{padding:70px 30px;}
+
+    .project-list-wrap .project-list .project-box:before{left:20px;top:20px;width:20px;height:20px;}
+
+    .project-list .project-box .box-inner .title{margin-bottom:15px;font-size:1.6rem;}
+
+    .project-list-wrap .project-list .project-box:after{right:20px;bottom:20px;}
+    .project-list-wrap .project-list .project-box.desk-top:after{width:30px;height:20px;}
+    .project-list-wrap .project-list .project-box.mobile:after{width:20px;height:30px;}
+
+    /* contact */
+    .contact .section-inner{flex-direction:column;}
+    .contact .section-inner .contact-img-wrap{margin-bottom:25px;}
+    .contact .section-inner .field-wrap{width:100%;}
+
+}
+
+/*:*:*:*:*:*:*: phone  *:*:*:*:*:*:*:*/
+@media all and (min-width:0) and (max-width:767px) {
+
+    /* about */
+    .about{height:100%;}
+
+    .about .about-wrap{position:relative;left:auto;top:auto;padding:80px 15px 100px 15px;}
+
+    .about .about-bg{position:absolute;height:100%;}
+
+    .about .about-wrap .about-content{flex-direction:column;}
+
+    .about-content .about-title-wrap .img-profile-wrap{margin-bottom:65px;}
+
+    .about-wrap .about-content .about-title-wrap{position:relative;left:auto;top:auto;margin:0 auto;padding:0;}
+
+    .about-wrap .about-content .about-info-list{width:100%;padding-top:0;}
+    .about-content .about-info-list .about-info{padding:30px 20px;}
+    .about-content .about-info-list .about-info:not(:last-child){margin-bottom:25px;}
+
+
+    /* project */
+    .project-list-wrap .project-list{flex-direction:column;}
+    .project-list-wrap .project-list .project-box{width:100%;}
+
+
+    /* contact */
+    .section-inner .field-wrap .field-inner{padding:30px 15px;}
+
+    .contact .section-inner .contact-img-wrap{width:200px;height:200px;}
+    .section-inner .contact-img-wrap img{width:115px;}
+
+    .field-wrap .field-inner .field-box{flex-direction:column;align-items:flex-start;margin-bottom:30px;}
+    .field-wrap .field-inner .field-box label{margin-bottom:15px;font-size:1.4rem;}
+    .field-wrap .field-inner .field-box input,
+    .field-wrap .field-inner .field-box textarea{width:100%;font-size:1.4rem;}
+
+
+}
+
+/*:*:*:*:*:*:*: tablet  *:*:*:*:*:*:*:*/
+@media all and (min-width:767px) and (max-width:1279px) {
+
+    /* about */
+    .about .about-wrap{left:0;}
+
+    .about-wrap .about-content .about-info-list{width:calc(100% - 350px);}
+}
+
+
+/*:*:*:*:*:*:*:* DESKTOP *:*:*:*:*:*:*:*/
+@media all and (min-width:1280px) {}

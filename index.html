@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
@@ -33,10 +34,11 @@
                         <li><a href="#Home" class="depth01">Home</a></li>
                         <li><a href="#About" class="depth01">About</a></li>
                         <li><a href="#Project" class="depth01">Project</a></li>
-                        <li><a href="javascript:void(0)" class="depth01">Contact</a></li>
+                        <li><a href="#Contact" class="depth01">Contact</a></li>
                     </ul>
                 </nav>
             </div>
+            <button type="button" class="btn-hamburger mobile-type">btn-hamburger</button>
         </header>
         <main class="container">
             <div class="wrap">
@@ -65,7 +67,7 @@
                     </section>
                 </div>
                 <div class="sub-wrap">
-                    <section id="About" class="about">
+                    <div id="About" class="about">
                         <div class="about-bg" style="background-image:url('images/about/bg_about.png')"></div>
                         <div class="about-wrap section-inner">
                             <div class="about-content" data-aos="fade-right">
@@ -76,11 +78,13 @@
                                 <ul class="about-info-list"  data-aos="zoom-in-left" data-aos-delay="300" data-aos-offset="50">
                                     <li class="about-info">
                                         <p class="desc">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid autem consequuntur debitis, et ex iure labore minus, mollitia neque nesciunt nostrum omnis quaerat quas, quis quos repellendus suscipit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Ad alias aliquid autem consequuntur debitis, et ex iure labore minus,
+                                            mollitia neque nesciunt nostrum omnis quaerat quas, quis quos repellendus suscipit.
                                         </p>
                                     </li>
                                     <li class="about-info">
-                                        <h4 class="info-title profile">Profile</h4>
+                                        <h4 class="info-title info-profile">Profile</h4>
                                         <div class="info-box">
                                             <dl class="info">
                                                 <dt>이름</dt>
@@ -93,7 +97,7 @@
                                         </div>
                                     </li>
                                     <li class="about-info">
-                                        <h4 class="info-title history">History</h4>
+                                        <h4 class="info-title info-history">History</h4>
                                         <div class="info-box">
                                             <dl class="info">
                                                 <dt>2016.11 - 2018.04</dt>
@@ -109,7 +113,7 @@
                                             </dl>
                                             <dl class="info">
                                                 <dt>2020.09 - 2021.01</dt>
-                                                <dd>
+                                                <dd class="desc">
                                                     강남 더 조은 컴퓨터 아카데미
                                                     UI/UX 웹디자인 웹퍼블리셔 실무자 양성과정 수료
                                                 </dd>
@@ -121,7 +125,7 @@
                                         </div>
                                     </li>
                                     <li class="about-info">
-                                        <h4 class="info-title contact">Contact</h4>
+                                        <h4 class="info-title info-contact">Contact</h4>
                                         <div class="info-box">
                                             <dl class="info">
                                                 <dt>Tel</dt>
@@ -134,7 +138,7 @@
                                         </div>
                                     </li>
                                     <li class="about-info">
-                                        <h4 class="info-title about-me">About Me</h4>
+                                        <h4 class="info-title info-about-me">About Me</h4>
                                         <div class="about-desc-wrap">
                                             <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolor dolore</p>
                                             <p class="desc">eligendi eveniet ex nam officiis quoatione recusandae tempora.</p>
@@ -142,19 +146,19 @@
                                         </div>
                                     </li>
                                     <li class="about-info">
-                                        <h4 class="info-title resume">MY Resume</h4>
+                                        <h4 class="info-title info-resume">MY Resume</h4>
                                         <div class="info-btn-wrap">
-                                            <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="btn-primary btn-underline">
-                                                이력서 보기 🙌</a>
+                                            <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="btn-primary">
+                                                <span class="btn-underline">이력서 보기 🙌</span></a>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                    <section id="Project" class="project">
+                    </div>
+                    <section id="Project" class="project section">
+                        <h2 class="main-title" data-aos="fade-up">Project</h2>
                         <div class="project-inner section-inner">
-                            <h2 class="main-title" data-aos="fade-up">project</h2>
                             <div class="project-list-wrap">
                                 <ul class="project-list">
                                     <li class="project-box desk-top" data-aos="fade-up" data-aos-delay="100" data-aos-offset="50">
@@ -191,35 +195,60 @@
                             </div>
                         </div>
                     </section>
+                    <section id="Contact" class="contact section">
+                        <h2 class="main-title" data-aos="fade-up">Contact</h2>
+                        <div class="section-inner" data-aos="fade-up" data-aos-delay="100">
+                            <div class="contact-img-wrap">
+                                <img src="images/contact/doeun_emoji_contact.png" alt="contact 이미지">
+                            </div>
+                            <div class="field-wrap">
+                                <div class="field-inner">
+                                    <form action="" method="post">
+                                        <div class="field-box">
+                                            <label for="Name">이름 / 회사명</label>
+                                            <input name="name" id="Name" type="text" placeholder="이름 / 회사명">
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="Email">이메일</label>
+                                            <input name="email" id="Email" type="text" placeholder="이메일 주소">
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="PhoneNum">전화번호</label>
+                                            <input name="phoneNum" id="PhoneNum" type="number" placeholder="전화번호">
+                                        </div>
+                                        <div class="field-box">
+                                            <label for="Inquire">문의내용</label>
+                                            <textarea name="" id="Inquire" cols="30" rows="10" placeholder="문의 내용을 적어주세요."></textarea>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button type="submit" class="btn-primary beige"><span class="btn-underline">문의하기</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </main>
-        <footer>
-
+        <footer class="footer">
+            <div class="footer-inner">
+                <p class="ft-title">끝까지 스크롤 해주셔서 감사합니다!</p>
+                <ul class="ft-info-list">
+                    <li>
+                        <a href="https://github.com/kde5813930" target="_blank" class="git">깃허브</a>
+                    </li>
+                    <li>
+                        <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf" target="_blank" class="notion">노션</a>
+                    </li>
+                </ul>
+                <p class="copyright">&copy;2023 Doeun's Portfolio - All right reserved</p>
+            </div>
+            <div class="go-top-wrap">
+                <button type="button" class="go-top">go top</button>
+            </div>
         </footer>
     </div>
-<!--    <div class="modal-wrap">-->
-<!--        <section class="modal">-->
-<!--            <header class="modal-header">-->
-<!--                <h2 class="title">현대 자동차 채용 사이트 입니다.</h2>-->
-<!--            </header>-->
-<!--            <div class="modal-content">-->
-<!--                <div class="modal-inner">-->
-<!--                    <div class="modal-img-wrap"><img src="images/project/img_monitor.png" alt=""></div>-->
-<!--                    <div class="modal-desc-wrap">-->
-<!--                        <p class="desc">-->
-<!--                            html / css / javascript / jquery 를 이용하여 작업하였습니다.-->
-<!--                        </p>-->
-<!--                        <p class="test">-->
-<!--                            기여도 : 메인페이지 50% / 서브페이지 100%-->
-<!--                        </p>-->
-<!--                        <a href="javascript:void(0)" class="btn-primary btn-underline">홈페이지 설명 바로가기</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <button type="button" class="btn-modal-close">close</button>-->
-<!--        </section>-->
-<!--    </div>-->
 </body>
 <script type="text/javascript">
 
@@ -234,7 +263,7 @@
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
 
     window.addEventListener("scroll", () => {
-        let hei = window.scrollY;
+        let hei = window.pageYOffset;
 
         let textOpacity = hei * -1/1000 + 1;
         let titleScale = hei * 1/1000 + 1;
@@ -288,6 +317,7 @@
         }
     });
 
+
     let $html = document.querySelector("html");
     const container = document.querySelector(".wrap")
     const projectBox = document.querySelectorAll(".project-box .box-inner");
@@ -319,7 +349,7 @@
                                                 <div class="modal-desc-wrap">
                                                     <p class="desc">${element.desc}</p>
                                                     <p class="test">${element.contributions}</p>
-                                                    <a href="${element.link}" target="_blank" class="btn-primary btn-underline">${element.linkDesc}</a>
+                                                    <a href="${element.link}" target="_blank" class="btn-primary"><span class="btn-underline">${element.linkDesc}</span></a>
                                                 </div>
                                             </div>
                                         </div>
