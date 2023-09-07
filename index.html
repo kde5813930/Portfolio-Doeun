@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="./css/aos.css">
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/aos.js"></script>
-    <script defer src="./js/main.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -203,7 +202,7 @@
                             </div>
                             <div class="field-wrap">
                                 <div class="field-inner">
-                                    <form action="" method="post">
+                                    <form >
                                         <div class="field-box">
                                             <label for="Name">이름 / 회사명</label>
                                             <input name="name" id="Name" type="text" placeholder="이름 / 회사명">
@@ -213,12 +212,12 @@
                                             <input name="email" id="Email" type="text" placeholder="이메일 주소">
                                         </div>
                                         <div class="field-box">
-                                            <label for="PhoneNum">전화번호</label>
-                                            <input name="phoneNum" id="PhoneNum" type="number" placeholder="전화번호">
+                                            <label for="Phone">전화번호</label>
+                                            <input name="phone" id="Phone" type="text" placeholder="전화번호" oninput="checkNumber(this)">
                                         </div>
                                         <div class="field-box">
-                                            <label for="Inquire">문의내용</label>
-                                            <textarea name="" id="Inquire" cols="30" rows="10" placeholder="문의 내용을 적어주세요."></textarea>
+                                            <label for="Message">내용</label>
+                                            <textarea name="message" id="Message" cols="30" rows="10" placeholder="문의 내용을 적어주세요."></textarea>
                                         </div>
                                         <div class="btn-wrap">
                                             <button type="submit" class="btn-primary beige"><span class="btn-underline">문의하기</span></button>
@@ -250,6 +249,10 @@
         </footer>
     </div>
 </body>
+<script defer src="./js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script defer src="./js/form.js"></script>
+
 <script type="text/javascript">
 
     AOS.init({
@@ -263,7 +266,7 @@
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
 
     window.addEventListener("scroll", () => {
-        let hei = window.pageYOffset;
+        let hei = window.scrollY;
 
         let textOpacity = hei * -1/1000 + 1;
         let titleScale = hei * 1/1000 + 1;
@@ -365,19 +368,6 @@
 
                 });
             });
-
-
-            // let html = '';
-            // data.forEach(element => {//foreach 배열의 개수만큼 반복문을 돌려라
-            //     console.log(element)//element에는 하나 하나의 배열이 담아져 있음
-            //     html+=`<li>
-            //         이름: ${element.이름}<br>
-            //         나이: ${element.나이}
-            //     </li>`
-
-
-            // });
-            // $('.list1').html(html)//화면에 출력
         });
 </script>
 </html>
