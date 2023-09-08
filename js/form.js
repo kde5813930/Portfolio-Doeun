@@ -7,16 +7,15 @@ function checkNumber(target) {
 
 emailjs.init("AA0DvAhqQGDKVXKZN");
 
-const contactForm = document.querySelector(".field-inner form");
 const contactBtn = document.querySelector(".contact button");
 
 contactBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const nameVal = document.querySelector("input[name=name]").value;
-    const emailVal = document.querySelector("input[name=email]").value;
-    const phoneVal = document.querySelector("input[name=phone]").value;
-    const messageVal = document.querySelector("textarea[name=message]").value;
+    let nameVal = document.querySelector("input[name=name]").value;
+    let emailVal = document.querySelector("input[name=email]").value;
+    let phoneVal = document.querySelector("input[name=phone]").value;
+    let messageVal = document.querySelector("textarea[name=message]").value;
 
     const templateParams = {
         name:nameVal,
@@ -25,12 +24,12 @@ contactBtn.addEventListener("click", (e) => {
         message:messageVal
     }
 
-    console.log(templateParams)
-
     emailjs.send('service_1v0nrsr', 'template_r4fflt6', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
         }, function(error) {
             console.log('FAILED...', error);
-        });
+    });
+
 });
+
