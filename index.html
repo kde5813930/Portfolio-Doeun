@@ -67,7 +67,7 @@
                 </div>
                 <div class="sub-wrap">
                     <div id="About" class="about">
-                        <div class="about-bg" style="background-image:url('images/about/bg_about.png')"></div>
+                        <div class="about-bg"></div>
                         <div class="about-wrap section-inner">
                             <div class="about-content" data-aos="fade-right">
                                 <div class="about-title-wrap">
@@ -202,22 +202,25 @@
                             </div>
                             <div class="field-wrap">
                                 <div class="field-inner">
-                                    <form >
+                                    <form>
                                         <div class="field-box">
-                                            <label for="Name">이름 / 회사명</label>
-                                            <input name="name" id="Name" type="text" placeholder="이름 / 회사명">
+                                            <label for="Name"><span class="required">이름 / 회사명</span></label>
+                                            <input name="name" id="Name" type="text" placeholder="이름 / 회사명" autocomplete="off">
+                                            <p class="error-txt">이름을 입력해 주세요.</p>
                                         </div>
                                         <div class="field-box">
-                                            <label for="Email">이메일</label>
-                                            <input name="email" id="Email" type="text" placeholder="이메일 주소">
+                                            <label for="Email"><span class="required">이메일</span></label>
+                                            <input name="email" id="Email" type="text" placeholder="이메일 주소" autocomplete="off">
+                                            <p class="error-txt">이메일을 입력해 주세요.</p>
                                         </div>
                                         <div class="field-box">
-                                            <label for="Phone">전화번호</label>
-                                            <input name="phone" id="Phone" type="text" placeholder="전화번호" oninput="checkNumber(this)">
+                                            <label for="Phone"><span>전화번호</span></label>
+                                            <input name="phone" id="Phone" type="text" class="phone-num" placeholder="전화번호" oninput="checkNumber(this)" autocomplete="off">
                                         </div>
                                         <div class="field-box">
-                                            <label for="Message">내용</label>
-                                            <textarea name="message" id="Message" cols="30" rows="10" placeholder="문의 내용을 적어주세요."></textarea>
+                                            <label for="Message"><span class="required">내용</span></label>
+                                            <textarea name="message" id="Message" cols="30" rows="10" placeholder="문의 내용을 적어주세요." autocomplete="off"></textarea>
+                                            <p class="error-txt">내용을 입력해 주세요.</p>
                                         </div>
                                         <div class="btn-wrap">
                                             <button type="submit" class="btn-primary beige"><span class="btn-underline">문의하기</span></button>
@@ -265,8 +268,10 @@
     const subTitle_2 = document.querySelector(".sub-tit .no-2");
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
 
+    mainTitle.style.opacity = "1";
+
     window.addEventListener("scroll", () => {
-        let hei = window.scrollY;
+        let hei = window.pageYOffset;
 
         let textOpacity = hei * -1/1000 + 1;
         let titleScale = hei * 1/1000 + 1;
@@ -356,7 +361,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn-modal-close">close</button>
+                                        <div class="btn-wrap"><button type="button" class="btn-modal-close">close</button></div>
                                     </section>
                                 </div>
                             `)

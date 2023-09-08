@@ -88,7 +88,8 @@ input[type=password]:focus,
 input[type=search]:focus,
 input[type=number]:focus,
 input[type=email]:focus {
-    border-color: #26282C;
+    border-color: var(--light-blue);
+    outline-width: 0;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -120,6 +121,10 @@ input:read-only:focus {
 
 ::placeholder {
     color:#26282C;font-weight:300;font-size:1.4rem;
+}
+
+textarea:focus{
+    outline-width: 0;
 }
 
 textarea {

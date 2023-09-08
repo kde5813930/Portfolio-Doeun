@@ -1,7 +1,7 @@
 /* about */
 .about{position:relative;width:100%;height:2100px;}
 
-.about .about-bg{position:sticky;left:0;top:0;z-index:-1;width:100%;height:100vh;background-repeat:no-repeat;background-size:cover;background-position:center center;}
+.about .about-bg{position:sticky;left:0;top:0;z-index:-1;width:100%;height:100vh;background-image:url('../images/about/bg_about.png');background-repeat:no-repeat;background-size:cover;background-position:center center;}
 .about .about-bg:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(255, 255, 255, 0.5)}
 
 .about .about-wrap{position:absolute;left:calc(50% - 640px);top:0;padding:0 20px;}
@@ -79,11 +79,16 @@
 
 .section-inner .field-wrap .field-inner{padding:50px;}
 
-.field-wrap .field-inner .field-box{display:flex;align-items:center;margin-bottom:40px;}
+.field-wrap .field-inner .field-box{display:flex;align-items:center;position:relative;padding-bottom:40px;}
 .field-wrap .field-inner .field-box:last-of-type{margin-bottom:0;}
 
-.field-wrap .field-inner .field-box label{display:inline-block;width:150px;font-weight:600;color:#fff;}
+.field-wrap .field-inner .field-box.parsley-error input,
+.field-wrap .field-inner .field-box.parsley-error textarea{border:1px solid #f7434f;}
+.field-wrap .field-inner .field-box label{display:inline-block;width:150px;color:#fff;}
 .field-wrap .field-inner .field-box textarea{width:calc(100% - 150px)}
+
+.error-txt{display:none;font-size:1.4rem;color:#f7434f;}
+.field-box.parsley-error .error-txt{display:block;position:absolute;left:160px;bottom:18px;}
 
 
 
@@ -149,7 +154,7 @@
 
     /* contact */
     .contact .section-inner{flex-direction:column;}
-    .contact .section-inner .contact-img-wrap{margin-bottom:25px;}
+    .contact .section-inner .contact-img-wrap{padding-bottom:25px;}
     .contact .section-inner .field-wrap{width:100%;}
 
 }
@@ -162,7 +167,7 @@
 
     .about .about-wrap{position:relative;left:auto;top:auto;padding:80px 15px 100px 15px;}
 
-    .about .about-bg{position:absolute;height:100%;}
+    .about .about-bg{position:absolute;height:100%;background-image:url('../images/about/mo_bg_about.png');}
 
     .about .about-wrap .about-content{flex-direction:column;}
 
@@ -186,10 +191,12 @@
     .contact .section-inner .contact-img-wrap{width:200px;height:200px;}
     .section-inner .contact-img-wrap img{width:115px;}
 
-    .field-wrap .field-inner .field-box{flex-direction:column;align-items:flex-start;margin-bottom:30px;}
+    .field-wrap .field-inner .field-box{flex-direction:column;align-items:flex-start;}
     .field-wrap .field-inner .field-box label{margin-bottom:15px;font-size:1.4rem;}
     .field-wrap .field-inner .field-box input,
     .field-wrap .field-inner .field-box textarea{width:100%;font-size:1.4rem;}
+
+    .field-box.parsley-error .error-txt{left:10px;bottom:18px;}
 
 
 }

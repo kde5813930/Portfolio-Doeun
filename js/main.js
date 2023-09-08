@@ -35,9 +35,9 @@ const gnbList = document.querySelectorAll(".gnb-list li");
 
     gnbList.forEach((nav) => {
         nav.addEventListener("click", () => {
-            if ( header.classList.contains("active")){
-                header.classList.remove("active");
-            }
+            toggleClass($html, 'lock');
+            toggleClass(header, 'active');
+            toggleClass(hamburgerBtn, 'active');
         });
     })
 
