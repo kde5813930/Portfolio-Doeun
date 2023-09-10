@@ -27,7 +27,7 @@ $input.forEach( (txt) => {
             target.parentNode.classList.remove("parsley-error");
         } else{
             target.parentNode.classList.add("parsley-error");
-            return false;
+            Toast("내용을 모두 입력해 주세요.", "fail");
         }
 
         if (target.classList.contains("phone-num")){
@@ -46,7 +46,7 @@ $textArea.addEventListener("keydown", (e) => {
         target.parentNode.classList.remove("parsley-error");
     } else{
         target.parentNode.classList.add("parsley-error");
-        return false;
+        Toast("내용을 모두 입력해 주세요.", "fail");
     }
 
 });
@@ -59,7 +59,7 @@ function inputCheck(target, pattern){
     if(pattern.test(target.value) === false){
         target.parentNode.classList.add("parsley-type");
         fieldWrap.classList.add("error");
-        return false;
+        Toast("이메일 형식을 확인해 주세요.", "fail");
     }   else{
         target.parentNode.classList.remove("parsley-type");
         fieldWrap.classList.remove("error");
@@ -89,6 +89,10 @@ contactBtn.addEventListener("click", (e) => {
     checkValue(email, emailVal);
     checkValue(message, messageVal);
 
+    if (nameVal === "" || emailVal === "" || messageVal === ""){
+        Toast("내용을 모두 입력해 주세요.", "fail");
+    }
+
     if (nameVal !== "" && emailVal !== "" && messageVal !== "" && fieldWrap.classList.contains("error") === false){
         const templateParams = {
             name:nameVal,
@@ -103,6 +107,10 @@ contactBtn.addEventListener("click", (e) => {
             }, function(error) {
                 console.log('FAILED...', error);
         });
+
+        Toast("메세지 전송이 완료 되었습니다.");
+        document.getElementById("form-contact").reset();
+
     }
 
 });

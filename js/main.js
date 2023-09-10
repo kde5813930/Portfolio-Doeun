@@ -109,4 +109,16 @@ function goTop() {
     });
 }
 
+// 토스트 메세지
+function Toast(message, type) {
+    const wrap = document.querySelector(".wrap");
+
+    wrap.insertAdjacentHTML("beforeend", `<article class="toast-message ${!!type ? type : ''}">${message}</article>`);
+
+    setTimeout(() => {
+        const toast = document.querySelector(".toast-message");
+        wrap.removeChild(toast);
+    }, 2100);
+}
+
 goTop();
