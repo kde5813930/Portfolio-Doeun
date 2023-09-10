@@ -82,13 +82,17 @@
 .field-wrap .field-inner .field-box{display:flex;align-items:center;position:relative;padding-bottom:40px;}
 .field-wrap .field-inner .field-box:last-of-type{margin-bottom:0;}
 
-.field-wrap .field-inner .field-box.parsley-error input,
-.field-wrap .field-inner .field-box.parsley-error textarea{border:1px solid #f7434f;}
+.field-wrap .field-inner .field-box[class*="parsley-"] input,
+.field-wrap .field-inner .field-box[class*="parsley-"] textarea{border:1px solid #f7434f;}
 .field-wrap .field-inner .field-box label{display:inline-block;width:150px;color:#fff;}
 .field-wrap .field-inner .field-box textarea{width:calc(100% - 150px)}
 
 .error-txt{display:none;font-size:1.4rem;color:#f7434f;}
-.field-box.parsley-error .error-txt{display:block;position:absolute;left:160px;bottom:18px;}
+
+.field-box[class*="parsley-"] .error-txt{position:absolute;left:160px;bottom:18px;}
+
+.field-box.parsley-error .error-txt.value-error{display:block;}
+.field-box.parsley-type .error-txt.type-error{display:block;}
 
 
 
@@ -196,7 +200,7 @@
     .field-wrap .field-inner .field-box input,
     .field-wrap .field-inner .field-box textarea{width:100%;font-size:1.4rem;}
 
-    .field-box.parsley-error .error-txt{left:10px;bottom:18px;}
+    .field-box[class*=parsley-] .error-txt{left:10px;bottom:18px;}
 
 
 }

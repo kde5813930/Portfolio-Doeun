@@ -13,8 +13,63 @@ function checkValue(input, value){
     }
 }
 
+//input, textarea keydown 시 value 체크
+let $input = document.querySelectorAll(".field-box input");
+let $textArea = document.querySelector(".field-box textarea");
+
+$input.forEach( (txt) => {
+    txt.addEventListener("keydown", (e) => {
+        let target = e.target;
+        let targetValue = target.value;
+        let valueLength = targetValue.length
+
+        if (valueLength >= 0){
+            target.parentNode.classList.remove("parsley-error");
+        } else{
+            target.parentNode.classList.add("parsley-error");
+            return false;
+        }
+
+        if (target.classList.contains("phone-num")){
+            return false;
+        }
+
+    });
+});
+
+$textArea.addEventListener("keydown", (e) => {
+    let target = e.target;
+    let targetValue = target.value;
+    let valueLength = targetValue.length
+
+    if (valueLength >= 0){
+        target.parentNode.classList.remove("parsley-error");
+    } else{
+        target.parentNode.classList.add("parsley-error");
+        return false;
+    }
+
+});
+
+//이메일 유효성 체크
+const fieldWrap = document.querySelector(".field-inner");
+const emailPattern = /^[A-Za-z0-9_\\.\\-]+@[A-Za-z0-9\\-]+\.[A-za-z0-9\\-]+/;
+
+function inputCheck(target, pattern){
+    if(pattern.test(target.value) === false){
+        target.parentNode.classList.add("parsley-type");
+        fieldWrap.classList.add("error");
+        return false;
+    }   else{
+        target.parentNode.classList.remove("parsley-type");
+        fieldWrap.classList.remove("error");
+    }
+}
+
+//emailJs id 불러오기
 emailjs.init("AA0DvAhqQGDKVXKZN");
 
+//메세지 작성 완료시 이메일 전송
 const contactBtn = document.querySelector(".contact button");
 
 contactBtn.addEventListener("click", (e) => {
@@ -34,7 +89,7 @@ contactBtn.addEventListener("click", (e) => {
     checkValue(email, emailVal);
     checkValue(message, messageVal);
 
-    if (nameVal !== "" && emailVal !== "" && messageVal !== ""){
+    if (nameVal !== "" && emailVal !== "" && messageVal !== "" && fieldWrap.classList.contains("error") === false){
         const templateParams = {
             name:nameVal,
             email:emailVal,
@@ -42,51 +97,12 @@ contactBtn.addEventListener("click", (e) => {
             message:messageVal
     }
 
-        console.log(templateParams);
-
         emailjs.send('service_1v0nrsr', 'template_r4fflt6', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
                 console.log('FAILED...', error);
         });
-    }
-
-});
-
-
-//input, textarea keydown 시 value 체크
-let $input = document.querySelectorAll(".field-box input");
-let $textArea = document.querySelector(".field-box textarea");
-
-$input.forEach( (txt) => {
-    txt.addEventListener("keydown", (e) => {
-        let target = e.target;
-        let targetValue = target.value;
-        let valueLength = targetValue.length
-
-         if (valueLength === 0){
-            target.parentNode.classList.remove("parsley-error");
-        } else{
-            target.parentNode.classList.remove("parsley-error");
-        }
-
-        if (target.classList.contains("phone-num")){
-            return false;
-        }
-
-    });
-});
-
-$textArea.addEventListener("keydown", (e) => {
-   let target = e.target;
-   let targetValue = target.value;
-    let valueLength = targetValue.length
-
-    if (valueLength === 0){
-        target.parentNode.classList.remove("parsley-error");
-    } else{
-        target.parentNode.classList.remove("parsley-error");
     }
 
 });

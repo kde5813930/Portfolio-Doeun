@@ -206,21 +206,23 @@
                                         <div class="field-box">
                                             <label for="Name"><span class="required">이름 / 회사명</span></label>
                                             <input name="name" id="Name" type="text" placeholder="이름 / 회사명" autocomplete="off">
-                                            <p class="error-txt">이름을 입력해 주세요.</p>
+                                            <p class="error-txt value-error">이름을 입력해 주세요.</p>
                                         </div>
                                         <div class="field-box">
                                             <label for="Email"><span class="required">이메일</span></label>
-                                            <input name="email" id="Email" type="text" placeholder="이메일 주소" autocomplete="off">
-                                            <p class="error-txt">이메일을 입력해 주세요.</p>
+                                            <input name="email" id="Email" type="text" placeholder="이메일 주소" onchange="inputCheck(this, emailPattern)" autocomplete="off">
+                                            <p class="error-txt value-error">이메일을 입력해 주세요.</p>
+                                            <p class="error-txt type-error">이메일을 올바르게 입력해 주세요.</p>
                                         </div>
                                         <div class="field-box">
                                             <label for="Phone"><span>전화번호</span></label>
                                             <input name="phone" id="Phone" type="text" class="phone-num" placeholder="전화번호" oninput="checkNumber(this)" autocomplete="off">
+                                            <p class="error-txt type-error">전화번호를 올바르게 입력해 주세요.</p>
                                         </div>
                                         <div class="field-box">
                                             <label for="Message"><span class="required">내용</span></label>
                                             <textarea name="message" id="Message" cols="30" rows="10" placeholder="문의 내용을 적어주세요." autocomplete="off"></textarea>
-                                            <p class="error-txt">내용을 입력해 주세요.</p>
+                                            <p class="error-txt value-error">내용을 입력해 주세요.</p>
                                         </div>
                                         <div class="btn-wrap">
                                             <button type="submit" class="btn-primary beige"><span class="btn-underline">문의하기</span></button>
