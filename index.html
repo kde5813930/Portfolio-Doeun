@@ -197,8 +197,11 @@
                     <section id="Contact" class="contact section">
                         <h2 class="main-title" data-aos="fade-up">Contact</h2>
                         <div class="section-inner" data-aos="fade-up" data-aos-delay="100">
-                            <div class="contact-img-wrap">
-                                <img src="images/contact/doeun_emoji_contact.png" alt="contact 이미지">
+                            <div class="contact-title-wrap">
+                                <p class="contact-title"></p>
+                                <div class="contact-img-wrap">
+                                    <img src="images/contact/doeun_emoji_contact.png" alt="contact 이미지">
+                                </div>
                             </div>
                             <div class="field-wrap">
                                 <div class="field-inner">
@@ -270,8 +273,6 @@
     const subTitle_2 = document.querySelector(".sub-tit .no-2");
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
 
-    mainTitle.style.opacity = "1";
-
     window.addEventListener("scroll", () => {
         let hei = window.pageYOffset;
 
@@ -327,7 +328,18 @@
         }
     });
 
+    //리로드시 메인타이틀 show/hide 및 헤더 블러처리
+    window.addEventListener("load", () => {
+        let hei = window.pageYOffset;
 
+        if (hei <= 0) {
+            mainTitle.style.opacity = "1";
+        }
+
+        headerBlur();
+    })
+
+    //contact 모달창
     let $html = document.querySelector("html");
     const container = document.querySelector(".wrap")
     const projectBox = document.querySelectorAll(".project-box .box-inner");
@@ -336,7 +348,6 @@
 
         .then((response) => response.json())//읽어온 데이터를 json으로 변환
         .then((data) => {
-
             data.forEach((element) => {
                 projectBox.forEach((boxes) => {
                     boxes.addEventListener("click", (e) => {

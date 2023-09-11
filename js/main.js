@@ -3,7 +3,7 @@
 // 헤더 블러 처리
 const header = document.querySelector(".header")
 
-window.addEventListener("scroll", () => {
+function headerBlur(){
     let scrollTop = window.pageYOffset
 
     if (scrollTop === 0){
@@ -11,18 +11,22 @@ window.addEventListener("scroll", () => {
     } else{
         header.classList.add("blur");
     }
+}
 
+window.addEventListener("scroll", () => {
+    headerBlur();
 });
+
 
 // 헤더 모바일 햄버거버튼 클릭시 이벤트
 const hamburgerBtn = document.querySelector(".btn-hamburger");
 
 function toggleClass(element, className) {
-    if(element.classList.contains(className)){
+    if (element.classList.contains(className)){
         element.classList.remove(className);
-    }else{
+    } else{
         element.classList.add(className);
-    };
+    }
 }
 hamburgerBtn.addEventListener('click', function(){
     toggleClass($html, 'lock');
@@ -30,18 +34,18 @@ hamburgerBtn.addEventListener('click', function(){
     toggleClass(hamburgerBtn, 'active');
 });
 
+
 // 헤더 모바일 gnb list 클릭시 이벤트
+
 const gnbList = document.querySelectorAll(".gnb-list li");
 
-    gnbList.forEach((nav) => {
-        nav.addEventListener("click", () => {
-            toggleClass($html, 'lock');
-            toggleClass(header, 'active');
-            toggleClass(hamburgerBtn, 'active');
-        });
-    })
-
-
+gnbList.forEach((nav) => {
+    nav.addEventListener("click", () => {
+        $html.classList.remove("lock");
+        header.classList.remove("active");
+        hamburgerBtn.classList.remove("active");
+    });
+});
 
 
 //모달 close
@@ -121,4 +125,22 @@ function Toast(message, type) {
     }, 2100);
 }
 
+//contact 부제목 타이핑 애니메이션
+const contactTitle = document.querySelector(".contact-title");
+
+const content = '💌\u00A0메세지를\u00A0입력해\u00A0주세요\u00A0:)';
+let count = 0;
+
+function typing() {
+    contactTitle.innerText += content[count++];
+
+    if (count > content.length) {
+        contactTitle.innerText = '';
+        count = 0;
+    }
+}
+
+
+
 goTop();
+setInterval(typing, 170);

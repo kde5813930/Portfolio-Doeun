@@ -72,8 +72,10 @@
 .contact{background-color:var(--light-gray);}
 .contact .section-inner{display:flex;justify-content:space-between;align-items:center;}
 
-.contact .section-inner .contact-img-wrap{display:flex;justify-content:center;align-items:center;width:300px;height:300px;background-color:var(--beige);border-radius:50%;}
-.section-inner .contact-img-wrap img{width:150px;height:auto;margin-top:-15px;}
+.section-inner .contact-title-wrap .contact-title{text-align:center;height:20px;font-size:1.8rem;}
+
+.section-inner .contact-title-wrap .contact-img-wrap{display:flex;justify-content:center;align-items:center;width:300px;height:300px;margin:20px auto 0;background-color:var(--beige);border-radius:50%;}
+.contact-title-wrap .contact-img-wrap img{width:150px;height:auto;margin-top:-15px;}
 
 .contact .section-inner .field-wrap{width:calc(100% - 400px);border-radius:10px;background-color:var(--blue);}
 
@@ -158,7 +160,7 @@
 
     /* contact */
     .contact .section-inner{flex-direction:column;}
-    .contact .section-inner .contact-img-wrap{padding-bottom:25px;}
+    .contact .section-inner .contact-title-wrap{margin-bottom:25px;}
     .contact .section-inner .field-wrap{width:100%;}
 
 }
@@ -192,8 +194,11 @@
     /* contact */
     .section-inner .field-wrap .field-inner{padding:30px 15px;}
 
-    .contact .section-inner .contact-img-wrap{width:200px;height:200px;}
-    .section-inner .contact-img-wrap img{width:115px;}
+    .section-inner .contact-title-wrap{width:100%;}
+
+    .section-inner .contact-title-wrap .contact-title{font-size:1.6rem;}
+    .section-inner .contact-title-wrap .contact-img-wrap{width:200px;height:200px;}
+    .section-inner .contact-title-wrap .contact-img-wrap img{width:115px;}
 
     .field-wrap .field-inner .field-box{flex-direction:column;align-items:flex-start;}
     .field-wrap .field-inner .field-box label{margin-bottom:15px;font-size:1.4rem;}
