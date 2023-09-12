@@ -5,9 +5,8 @@
 .header-inner .logo a{display:block;width:80px;height:80px;font-size:0;background:url('../images/logo.png') no-repeat center;background-size:80px 50px}
 
 /* gnb */
-.gnb-list{display:flex;align-items:center;}
-.gnb-list li .depth01{padding:0 15px;font-size:1.8rem;font-weight:500;}
-
+.gnb .gnb-list{display:flex;align-items:center;}
+.gnb-list li .depth01{display:block;padding:0 15px;font-size:1.8rem;font-weight:500;height:80px;line-height:80px;}
 
 /* footer */
 .footer .footer-inner{overflow: hidden;display:flex;flex-direction:column;align-items:center;max-width:1280px;width:100%;margin:0 auto;padding:150px 20px 75px;}
@@ -55,7 +54,7 @@
     .header.active .header-inner .gnb{display:block;}
     .header-inner .gnb .gnb-list{flex-direction:column;height:100%;padding-top:60px;}
 
-    .gnb-list li .depth01{display:block;padding:20px 0;font-size:3rem;}
+    .gnb-list li .depth01{display:block;height:auto;padding:25px 0;font-size:3rem;line-height:1;}
 
     .btn-hamburger{position:absolute;right:12px;top:10px;width:40px;height:40px;background-image:url('../images/common/btn_hamburger.svg');background-repeat:no-repeat;background-position:center center;font-size:0;}
     .btn-hamburger.active{background-image:url('../images/common/btn_close.svg');background-size:30px 30px;}
