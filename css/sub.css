@@ -24,6 +24,7 @@
 .about-info-list .about-info .info-title:before{content:'';display:inline-block;position:absolute;left:0;top:calc(50% - 11px);width:20px;height:22px;background-repeat:no-repeat;background-position:50% 50%;}
 .about-info-list .about-info .info-title.info-profile:before{background-image:url('../images/about/icon_idCard.svg');}
 .about-info-list .about-info .info-title.info-history:before{background-image:url('../images/about/icon_laptopCode.svg');}
+.about-info-list .about-info .info-title.info-history-desc:before{background-image:url('../images/about/icon_comments.svg');}
 .about-info-list .about-info .info-title.info-contact:before{background-image:url('../images/about/icon_user.svg');}
 .about-info-list .about-info .info-title.info-about-me:before{background-image:url('../images/about/icon_smile.svg');}
 .about-info-list .about-info .info-title.info-resume:before{background-image:url('../images/about/icon_file.svg');}
