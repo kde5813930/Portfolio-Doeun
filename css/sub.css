@@ -1,5 +1,5 @@
 /* about */
-.about{position:relative;width:100%;height:2100px;}
+.about{position:relative;width:100%;height:2150px;}
 
 .about .about-bg{position:sticky;left:0;top:0;z-index:-1;width:100%;height:100vh;background-image:url('../images/about/bg_about.png');background-repeat:no-repeat;background-size:cover;background-position:center center;}
 .about .about-bg:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(255, 255, 255, 0.5)}
