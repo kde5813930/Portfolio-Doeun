@@ -6,7 +6,6 @@
     font-style: normal;
     font-weight: 300;
     src: url('../font/NotoSansKR-Regular.woff') format('woff');
-    unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
@@ -14,7 +13,6 @@
     font-style: normal;
     font-weight: 400;
     src: url('../font/NotoSansKR-medium.woff') format('woff');
-    unicode-range:U+AC00-D7A3;
 }
 
 
@@ -23,7 +21,6 @@
     font-style: normal;
     font-weight: 500;
     src: url('../font/NotoSansKR-Bold.woff') format('woff');
-    unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
@@ -31,7 +28,6 @@
     font-style: normal;
     font-weight: 500;
     src: url('../font/NotoSansKR-ExtraBold.woff') format('woff');
-    unicode-range:U+AC00-D7A3;
 }
 
 
