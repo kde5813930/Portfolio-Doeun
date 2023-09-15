@@ -30,7 +30,6 @@
 
 .btn-underline{display:inline-block;position:relative;}
 .btn-underline:after{content:'';position:absolute;left:0;bottom:-1px;width:0;height:1px;background-color:var(--black);transition:all .3s ease;}
-.btn-primary:hover .btn-underline:after{width:100%;}
 
 /* input */
 input{height:40px;}
@@ -75,7 +74,6 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 .go-top-wrap.active{opacity:1;position:fixed;bottom:40px;transition:.6s;}
 .go-top-wrap.bottom{position:absolute;top:-100px;}
 .go-top-wrap .go-top{width:60px;height:60px;border-radius:50%;border:1px solid var(--gray);background:#a8a8a8 url('../images/common/go_top_arrow.svg') no-repeat center;font-size:0;transition:.3s;}
-.go-top-wrap .go-top:hover{border-color:transparent;background-color:var(--blue);}
 
 /* 토스트 메세지 */
 .toast-message{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;padding:0 15px;background-color:var(--beige);color:var(--black);opacity:0;transition:0.3s;animation:2s ease-in 0s forwards toast;}
@@ -166,4 +164,10 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 
 
 /*:*:*:*:*:*:*:* DESKTOP *:*:*:*:*:*:*:*/
-@media all and (min-width:1280px) {}
+@media all and (min-width:1280px) {
+
+    /* hover */
+    .go-top-wrap .go-top:hover{border-color:transparent;background-color:var(--blue);}
+
+    .btn-primary:hover .btn-underline:after{width:100%;}
+}

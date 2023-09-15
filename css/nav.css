@@ -1,6 +1,6 @@
 /* header */
 .header{position:fixed;left:0;top:0;z-index:999;width:100%;height:80px;transition:.3s;}
-.header.blur{backdrop-filter:blur(30px);background-color:rgba(255, 255, 255, 0.5);}
+.header.blur{backdrop-filter:blur(30px);background-color:rgba(255, 255, 255, 0.7);}
 .header .header-inner{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 15px 0 30px;}
 .header-inner .logo a{display:block;width:80px;height:80px;font-size:0;background:url('../images/logo.png') no-repeat center;background-size:80px 50px}
 
@@ -21,9 +21,6 @@
 
 .footer .footer-inner .ft-info-list li .git{background-image:url(../images/footer/icon_github.svg);}
 .footer .footer-inner .ft-info-list li .notion{background-image:url(../images/footer/icon_notion.svg);}
-
-.footer .footer-inner .ft-info-list li .git:hover{background-image:url(../images/footer/icon_github_hover.svg);transform:scale(1.2);}
-.footer .footer-inner .ft-info-list li .notion:hover{background-image:url(../images/footer/icon_notion_hover.svg);transform:scale(1.2);}
 
 .footer .footer-inner .copyright{text-align:center;font-size:1.8rem;color:#fff;}
 
@@ -80,4 +77,8 @@
 /*:*:*:*:*:*:*:* DESKTOP *:*:*:*:*:*:*:*/
 @media all and (min-width:1280px) {
     .mobile-type{display:none;}
+
+    /* hover */
+    .footer .footer-inner .ft-info-list li .git:hover{background-image:url(../images/footer/icon_github_hover.svg);transform:scale(1.2);}
+    .footer .footer-inner .ft-info-list li .notion:hover{background-image:url(../images/footer/icon_notion_hover.svg);transform:scale(1.2);}
 }

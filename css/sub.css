@@ -52,7 +52,6 @@
 .project-list-wrap .project-list{display:flex;flex-wrap:wrap;}
 
 .project-list-wrap .project-list .project-box{position:relative;;width:calc(33.3% - 15px);margin:0 15px 15px 0;}
-/*.project-list-wrap .project-list .project-box:hover{border:1.5px solid var(--blue);background-color:rgba(239, 232, 218, 0.5);}*/
 
 .project-list-wrap .project-list .project-box:before,
 .project-list-wrap .project-list .project-box:after{content:'';position:absolute;background-repeat:no-repeat;background-size:100% 100%;}
@@ -64,7 +63,6 @@
 .project-list-wrap .project-list .project-box.mobile:after{width:25px;height:35px;background-image:url('../images/project/icon_mobile.svg');}
 
 .project-list .project-box .box-inner{display:block;width:100%;height:100%;padding:100px 50px;border:2.5px solid transparent;border-radius:10px;background-color:var(--beige);}
-.project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
 
 .project-list .project-box .box-inner .title{margin-bottom:25px;font-size:1.8rem;font-weight:600;line-height:1.4;}
 
@@ -222,4 +220,9 @@
 
 
 /*:*:*:*:*:*:*:* DESKTOP *:*:*:*:*:*:*:*/
-@media all and (min-width:1280px) {}
+@media all and (min-width:1280px) {
+
+    /* hover */
+    .project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
+
+}
