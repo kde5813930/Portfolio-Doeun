@@ -120,6 +120,8 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
     .main-title{margin-bottom:45px;font-size:3rem;}
     .desc{font-size:1.4rem;}
 }
+
+
 /*:*:*:*:*:*:*: phone  *:*:*:*:*:*:*:*/
 @media all and (min-width:0) and (max-width:767px) {
 
@@ -128,7 +130,7 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 
     /* btn */
     .btn-primary{width:150px;}
-    .btn-underline{font-size:1.4rem;}
+    .btn-underline{font-size:1.4rem;font-weight:300;}
 
     /* modal */
     .modal-wrap .modal{overflow-y:hidden;background-size:250px auto;background-position:right -10px bottom -7px;}

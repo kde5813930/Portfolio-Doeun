@@ -28,7 +28,7 @@ body {
     font-family: "Montserrat", "NotoSans", "맑은 고딕", "Malgun Gothic", 돋움, Dotum, sans-serif;
     line-height:1.1;
     color: #000;
-    background-color:var(--light-blue);
+    background-color:#fff;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {
