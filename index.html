@@ -277,6 +277,8 @@
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
     const scrollWrap = document.querySelector(".scroll-wrap");
 
+    mainTitle.classList.add("active");
+
     window.addEventListener("scroll", () => {
         let hei = window.pageYOffset;
 
@@ -302,12 +304,12 @@
         if (hei > 1000){
             mainTitle.style.opacity = 0;
             mainTitle.style.scale = 2;
-            mainTitle.style.display = "none";
+            mainTitle.classList.remove("active");
 
             subTitle_1.style.opacity = subTextOpacity - 2;
             subTitle_1.style.transform = `translateY(${textScroll + 300}px)`;
         }   else {
-            mainTitle.style.display = "flex";
+            mainTitle.classList.add("active");
             subTitle_1.style.opacity = 0;
         }
 
@@ -339,8 +341,12 @@
         let hei = window.pageYOffset;
 
         if (hei <= 0) {
+            mainTitle.classList.add("active");
             mainTitle.style.opacity = "1";
             scrollWrap.style.opacity = "1";
+        } else{
+            mainTitle.classList.remove("active");
+            mainTitle.style.opacity = "0";
         }
 
         headerBlur();
