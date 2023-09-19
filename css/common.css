@@ -61,9 +61,10 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 .modal-wrap .modal .modal-inner{display:flex;justify-content:center;}
 
 .modal .modal-inner .modal-img-wrap{margin-right:35px;}
-.modal .modal-inner .modal-img-wrap img{max-width:100%;width:400px;}
+.modal .modal-inner .modal-img-wrap img{max-width:350px;width:100%;}
 .modal.kukMin .modal-inner .modal-img-wrap img{width:150px;}
 
+.modal .modal-inner .modal-desc-wrap{margin-top:10px;}
 .modal-inner .modal-desc-wrap .desc{margin-bottom:40px;}
 .modal-inner .modal-desc-wrap .test{margin-bottom:70px;}
 
