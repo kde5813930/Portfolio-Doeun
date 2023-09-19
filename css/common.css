@@ -120,6 +120,7 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 @media all and (min-width:0) and (max-width:1280px) {
     .main-title{margin-bottom:45px;font-size:3rem;}
     .desc{font-size:1.4rem;}
+    .btn-underline{font-weight:300;}
 }
 
 
