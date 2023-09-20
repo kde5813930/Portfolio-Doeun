@@ -279,7 +279,9 @@
     const subTitle_3 = document.querySelector(".sub-tit .no-3");
     const scrollWrap = document.querySelector(".scroll-wrap");
 
-    mainTitle.classList.add("active");
+    window.addEventListener('DOMContentLoaded', () => {
+        mainTitle.classList.add("active");
+    });
 
     window.addEventListener("scroll", () => {
         let hei = window.pageYOffset;
