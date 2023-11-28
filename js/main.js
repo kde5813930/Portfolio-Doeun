@@ -79,6 +79,23 @@ document.addEventListener("click", (e) => {
 });
 
 
+// 동영상 커버 클릭시 영상 재생
+const media = document.querySelector('.media-wrap');
+
+media.addEventListener("click", (e) => {
+    const target = e.currentTarget
+    const url = target.getAttribute("data-url")
+    const iframe = target.querySelector('iframe');
+    const img = target.querySelector('.img-box');
+
+    console.log(img)
+
+    iframe.setAttribute("src", url)
+    img.style.display = "none";
+
+});
+
+
 //go-top
 function goTop() {
 
@@ -128,7 +145,7 @@ function Toast(message, type) {
 //contact 부제목 타이핑 애니메이션
 const contactTitle = document.querySelector(".contact-title");
 
-const content = '💌\u00A0메세지를\u00A0입력해\u00A0주세요\u00A0:)';
+const content = '\u00A0메세지를\u00A0입력해\u00A0주세요\u00A0:)';
 let count = 0;
 
 function typing() {

@@ -7,7 +7,7 @@
 .about .about-wrap{position:absolute;left:calc(50% - 640px);top:0;padding:0 20px;}
 .about .about-wrap .about-content{position:relative;display:flex;justify-content:space-between;}
 
-.about-wrap .about-content .about-title-wrap{position:sticky;top:0;height:100%;padding:150px 0 18% 0;}
+.about-wrap .about-content .about-title-wrap{position:sticky !important;top:0;height:100%;padding:150px 0 18% 0;}
 
 .about-content .about-title-wrap .title{font-size:4rem;}
 .about-content .about-title-wrap .img-profile-wrap .img-profile{width:350px;height:350px;border-radius:50%;object-fit:cover;}
@@ -43,7 +43,7 @@
 .about-info .about-desc-wrap .desc:last-of-type{margin-bottom:0;}
 .about-info .about-desc-wrap .desc:after{content:'';position:absolute;left:0;top:2px;width:20px;height:20px;background:url('../images/common/icon_check.svg') no-repeat;}
 
-.about-info-list .about-info .info-btn-wrap{}
+.about-content .swiper-pagination{display:none;}
 
 
 /* project */
@@ -69,6 +69,27 @@
 .project-list .project-box .box-inner .title{margin-bottom:30px;font-size:1.8rem;font-weight:600;line-height:1.4;}
 
 .project-box .box-inner .desc .highlight{display:inline-block;margin-bottom:6px;}
+
+
+
+/* study */
+.study{background-color:var(--light-blue);}
+.study .section-inner{display:flex;justify-content:space-between;align-items:center;}
+.study .section-inner .study-media-wrap{width:50%;min-width:40%;}
+.section-inner .study-media-wrap .media-wrap{position:relative;width:100%;height:0;padding-top:56%;}
+
+.study-media-wrap .media-wrap .img-box{background-size:100% 100%;z-index:10;}
+.study-media-wrap .media-wrap .img-box:after{content:'';position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%, -50%);z-index:100;background:url('../images/study/icon_play.svg') no-repeat  center / 100%;}
+.study-media-wrap .media-wrap .img-box:hover:after{cursor:pointer;}
+
+.study-media-wrap .media-wrap .media-box iframe{z-index:1;}
+
+.section-inner .study-media-wrap .img-box,
+.study-media-wrap .media-wrap .media-box iframe{position:absolute;left:0;top:0;width:100%;height:100%;}
+
+.section-inner .study-desc-wrap{display:flex;flex-direction:column;justify-content:space-between;margin-left:30px;padding:20px 30px;border-radius:10px;background-color:var(--beige);}
+.section-inner .study-desc-wrap .info-list{margin-bottom:40px;}
+.section-inner .study-desc-wrap .info-list li:after{top:8px;}
 
 
 /* contact */
@@ -161,6 +182,14 @@
     .project-list .project-box.desk-top .box-inner:after{width:30px;height:20px;}
     .project-list .project-box.mobile .box-inner:after{width:20px;height:30px;}
 
+    /* study */
+    .study .section-inner{flex-direction:column;}
+
+    .study .section-inner .study-media-wrap{width:70%;margin-bottom:50px;}
+
+    .section-inner .study-desc-wrap{width:100%;margin-left:0;padding:30px;}
+    .section-inner .study-desc-wrap .info-list{margin-bottom:30px;}
+
     /* contact */
     .contact .section-inner{flex-direction:column;}
     .contact .section-inner .contact-title-wrap{margin-bottom:25px;}
@@ -174,19 +203,26 @@
     /* about */
     .about{height:100%;}
 
-    .about .about-wrap{position:relative;left:auto;top:auto;padding:80px 15px 100px 15px;}
+    .about .about-wrap{position:relative;left:auto;top:auto;padding:80px 15px 30px 15px;}
 
     .about .about-bg{position:absolute;height:100%;background-image:url('../images/about/mo_bg_about.png');}
 
     .about .about-wrap .about-content{flex-direction:column;}
 
-    .about-content .about-title-wrap .img-profile-wrap{margin-bottom:65px;}
+    .about-content .about-title-wrap .img-profile-wrap{margin-bottom:20px;}
 
     .about-wrap .about-content .about-title-wrap{position:relative;left:auto;top:auto;margin:0 auto;padding:0;}
 
-    .about-wrap .about-content .about-info-list{width:100%;padding-top:0;}
-    .about-content .about-info-list .about-info{padding:30px 20px;}
+    .about-wrap .about-content .about-info-list{flex-direction:row;align-items:center;width:100%;padding-top:0;}
+    .about-content .about-info-list .about-info{display:flex;flex-direction:column;justify-content:center;height:100%;min-height:250px;padding:30px 20px;}
     .about-content .about-info-list .about-info:not(:last-child){margin-bottom:25px;}
+
+    .about-content .swiper-pagination{display:block;}
+    .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0 !important;}
+    .swiper-pagination-bullet-active{background:var(--dark-gray) !important;}
+
+    /* study */
+    .study .section-inner .study-media-wrap{width:100%;margin-bottom:30px;}
 
 
     /* project */
@@ -239,6 +275,10 @@
     }
 
     /* hover */
-    .project-list .project-box .box-inner:hover{border-color:var(--blue);background-color:rgba(255, 255, 255, 0.7);transition:.3s;}
+    .project-list .project-box .box-inner:hover{
+        border-color:var(--blue);
+        background: rgb(255,255,255);
+        background: linear-gradient(145deg, rgba(255,255,255,1) 15%, rgba(228,231,236,1) 61%, rgba(241,234,209,1) 100%);
+        transition:background .3s;}
 
 }

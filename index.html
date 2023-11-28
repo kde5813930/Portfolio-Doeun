@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet"  media="screen and (max-width: 767px)" href="./css/swiper-bundle.min.css">
     <script src="./assets/jquery-3.6.0.min.js"></script>
+    <script src="./assets/swiper.min.js"></script>
     <script src="./assets/aos.js"></script>
 </head>
 <body>
@@ -34,6 +36,7 @@
                         <li><a href="#Home" class="depth01">Home</a></li>
                         <li><a href="#About" class="depth01">About</a></li>
                         <li><a href="#Project" class="depth01">Project</a></li>
+                        <li><a href="#Study" class="depth01">Study</a></li>
                         <li><a href="#Contact" class="depth01">Contact</a></li>
                     </ul>
                 </nav>
@@ -71,13 +74,13 @@
                     <div id="About" class="about">
                         <div class="about-bg"></div>
                         <div class="about-wrap section-inner">
-                            <div class="about-content" data-aos="fade-up">
+                            <div class="about-content swiper-container" data-aos="fade-up">
                                 <div class="about-title-wrap">
                                     <h3 class="main-title">About Me</h3>
                                     <div class="img-profile-wrap"><img src="./images/project/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
                                 </div>
-                                <ul class="about-info-list"  data-aos="zoom-in-left" data-aos-delay="150">
-                                    <li class="about-info">
+                                <ul class="about-info-list swiper-wrapper"  data-aos="zoom-in-left" data-aos-delay="150">
+                                    <li class="about-info swiper-slide">
                                         <h4 class="info-title info-profile">Profile</h4>
                                         <div class="info-box">
                                             <dl class="info">
@@ -90,7 +93,7 @@
                                             </dl>
                                         </div>
                                     </li>
-                                    <li class="about-info">
+                                    <li class="about-info swiper-slide">
                                         <h4 class="info-title info-history">History</h4>
                                         <div class="info-box">
                                             <dl class="info">
@@ -118,7 +121,7 @@
                                             </dl>
                                         </div>
                                     </li>
-                                    <li class="about-info">
+                                    <li class="about-info swiper-slide">
                                         <h4  class="info-title info-history-desc">History description</h4>
                                         <p class="desc">
                                             과거에 저는 여행사 항공 예약/발권 업무를 담당하여 항공시스템을 다루는 업무를 담당 하였습니다.
@@ -127,7 +130,7 @@
                                             저 또한 현실에 안주하지않고 진취적인 자세로 발전해 나가는 사람이 되고 싶습니다.
                                         </p>
                                     </li>
-                                    <li class="about-info">
+                                    <li class="about-info swiper-slide">
                                         <h4 class="info-title info-contact">Contact</h4>
                                         <div class="info-box">
                                             <dl class="info">
@@ -140,7 +143,7 @@
                                             </dl>
                                         </div>
                                     </li>
-                                    <li class="about-info">
+                                    <li class="about-info swiper-slide">
                                         <h4 class="info-title info-about-me">About Me</h4>
                                         <div class="about-desc-wrap">
                                             <p class="desc">지속적으로 발전함에 가치를 둡니다.</p>
@@ -149,7 +152,7 @@
                                                 사용자가 서비스와 브랜드를 신뢰하게 만드는 것이 목표입니다.</p>
                                         </div>
                                     </li>
-                                    <li class="about-info">
+                                    <li class="about-info swiper-slide">
                                         <h4 class="info-title info-resume">MY Resume</h4>
                                         <div class="info-btn-wrap">
                                             <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="btn-primary">
@@ -157,6 +160,7 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
@@ -197,6 +201,31 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </section>
+                    <section id="Study" class="study section">
+                        <h2 class="main-title" data-aos="fade-up">Study</h2>
+                        <div class="section-inner">
+                            <div class="study-media-wrap">
+                                <div class="media-wrap" data-url="./media/Todo-List.mp4">
+                                    <div class="img-box" style="background-image:url('./images/study/img_todoList.png')"></div>
+                                    <div class="media-box">
+                                        <iframe class="media" src="" frameborder="no" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <article class="study-desc-wrap">
+                                <h2 class="sub-title">TODO LIST APP</h2>
+                                <ul class="info-list">
+                                    <li>React js로 작업한 개인 프로젝트 입니다.</li>
+                                    <li>스타일은 scss를 이용하였습니다.</li>
+                                    <li>삭제하기, 필터링 기능, 기존 데이터를 로컬스토리지에 저장하는 기능등을 구현해 보았습니다.</li>
+                                    <li>context api를 이용하여 다크모드 기능을 구현해 보았습니다.</li>
+                                </ul>
+                                <div class="btn-wrap">
+                                    <a href="https://kde5813930.github.io/Todo-app/" target="_blank" class="btn-primary"><span class="btn-underline">사이트 이동하기 🙋‍♀</span></a>
+                                </div>
+                            </article>
                         </div>
                     </section>
                     <section id="Contact" class="contact section">
@@ -355,7 +384,26 @@
         }
 
         headerBlur();
-    })
+    });
+
+    // 이미지 preload
+
+    let images = [];
+
+    function preload() {
+        for(let i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments.src;
+        }
+    }
+
+    preload(
+        "./images/project/img_desktop_hyundai.jpg",
+        "./images/project/img_desktop_kia.jpg",
+        "./images/project/img_desktop_kb.jpg",
+        "./images/project/img_mobile_kb.jpg",
+        "./images/project/img_desktop_sk.jpg",
+    )
 
     //project 모달창
     let $html = document.querySelector("html");
@@ -402,5 +450,37 @@
                 });
             });
         });
+
+
+
+    /* about section 모바일에서만 스와이퍼 불러오기 */
+    let ww = $(window).width();
+    let mySwiper = undefined;
+
+    function initSwiper() {
+        if (ww < 767 && mySwiper === undefined) {
+            mySwiper = new Swiper(".swiper-container", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                simulateTouch: true,
+                centeredSlides:true,
+                loop:true,
+                pagination: {
+                    el: '.swiper-container .swiper-pagination',
+                    type: 'bullets',
+                },
+            });
+        } else if (ww >= 767 && mySwiper !== undefined) {
+            mySwiper.destroy();
+            mySwiper = undefined;
+        }
+    }
+
+    initSwiper();
+
+    $(window).on('resize', function () {
+        ww = $(window).width();
+        initSwiper();
+    });
 </script>
 </html>

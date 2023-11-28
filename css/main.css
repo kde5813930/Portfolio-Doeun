@@ -26,8 +26,39 @@
 .main-tit-wrap .main-tit .no-7{right:50px;top:calc(50% - 65px);}
 .main-tit-wrap .main-tit .no-8{width:50px;right:0;top:calc(50% - 35px);}
 
-.main-tit-wrap .main-tit span{font-size:13rem;font-weight:500;display:inline-block;width:100%;}
-.main-tit-wrap .main-tit span{position:absolute;bottom:-240px;left:0;animation:cu-fadeUp .5s both;}
+.main-tit-wrap .main-tit span{position:absolute;bottom:-240px;left:0;font-size:13rem;font-weight:500;display:inline-block;width:100%;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+            180deg,
+            #dfdfdf 9%,
+            #dddddd 22%,
+            #e8e2c8 39%,
+            #e8d8b7 54%,
+            #bad0f2 69%,
+            #a8b8e2 86%,
+            #86a4c9
+    );
+    background-size: 100% 300%;
+    background-position-y: 0;
+    animation-fill-mode: forwards, both;
+    animation-name: cu-fadeUp, gradient;
+    animation-delay: 0s, .5s;
+    animation-duration: .5s, 3s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    /*animation-iteration-count:  infinite;*/
+
+}
+@keyframes gradient {
+    from {
+        background-position-y: 0%;
+    }
+    to {
+        background-position-y: 100%;
+    }
+}
+
+/*.main-tit-wrap .main-tit span{position:absolute;bottom:-240px;left:0;animation:cu-fadeUp .5s both;}*/
 .main-tit-wrap .main-tit .no-1 span{animation-delay:.2s;}
 .main-tit-wrap .main-tit .no-2 span{animation-delay:.3s;}
 .main-tit-wrap .main-tit .no-3 span{animation-delay:.2s;}
