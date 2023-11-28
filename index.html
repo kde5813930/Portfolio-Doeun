@@ -404,19 +404,19 @@
         .then((response) => response.json())//읽어온 데이터를 json으로 변환
         .then((data) => {
             data.forEach((element) => {
+                // 이미지 미리 불러오기
+                preloading([
+                    "./images/project/img_desktop_hyundai.png",
+                    "./images/project/img_desktop_kia.png",
+                    "./images/project/img_desktop_kbAdmin.png",
+                    "./images/project/img_mobile_kb.png",
+                    "./images/project/img_desktop_sk.png",
+                ]);
+
                 projectBox.forEach((boxes) => {
                     boxes.addEventListener("click", (e) => {
                         const target = e.currentTarget;
                         let projectName = target.dataset.name;
-
-                        // 이미지 미리 불러오기
-                        preloading([
-                            "./images/project/img_desktop_hyundai.png",
-                            "./images/project/img_desktop_kia.png",
-                            "./images/project/img_desktop_kbAdmin.png",
-                            "./images/project/img_mobile_kb.png",
-                            "./images/project/img_desktop_sk.png",
-                        ]);
 
                         if (element.name === projectName){
                             $html.classList.add("lock");

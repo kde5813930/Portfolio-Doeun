@@ -87,7 +87,8 @@
 .section-inner .study-media-wrap .img-box,
 .study-media-wrap .media-wrap .media-box iframe{position:absolute;left:0;top:0;width:100%;height:100%;}
 
-.section-inner .study-desc-wrap{display:flex;flex-direction:column;justify-content:space-between;margin-left:30px;padding:60px 40px;border-radius:10px;background-color:var(--beige);}
+.section-inner .study-desc-wrap{display:flex;flex-direction:column;justify-content:space-between;position:relative;margin-left:30px;padding:60px 40px;border-radius:10px;background-color:var(--beige);}
+.section-inner .study-desc-wrap:before{content:'';position:absolute;right:50px;top:45px;width:50px;height:50px;background:url('../images/study/bg_pencil.png') no-repeat center / 100% 100%;transform:rotate(-65deg)}
 .section-inner .study-desc-wrap .info-list{margin-bottom:40px;}
 .section-inner .study-desc-wrap .info-list li:after{top:8px;}
 
@@ -190,6 +191,8 @@
     .section-inner .study-desc-wrap{width:100%;margin-left:0;padding:30px;}
     .section-inner .study-desc-wrap .info-list{margin-bottom:30px;}
 
+    .section-inner .study-desc-wrap:before{right:35px;top:30px;width:60px;height:55px;}
+
     /* contact */
     .contact .section-inner{flex-direction:column;}
     .contact .section-inner .contact-title-wrap{margin-bottom:25px;}
@@ -224,6 +227,7 @@
     /* study */
     .study .section-inner .study-media-wrap{width:100%;margin-bottom:30px;}
     .study-media-wrap .media-wrap .img-box:after{width:40px;height:40px;}
+    .section-inner .study-desc-wrap:before{right:25px;top:15px;width:45px;height:40px;}
 
     /* project */
     .project-list-wrap .project-list{flex-direction:column;}
