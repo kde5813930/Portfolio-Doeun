@@ -87,7 +87,7 @@
 .section-inner .study-media-wrap .img-box,
 .study-media-wrap .media-wrap .media-box iframe{position:absolute;left:0;top:0;width:100%;height:100%;}
 
-.section-inner .study-desc-wrap{display:flex;flex-direction:column;justify-content:space-between;margin-left:30px;padding:20px 30px;border-radius:10px;background-color:var(--beige);}
+.section-inner .study-desc-wrap{display:flex;flex-direction:column;justify-content:space-between;margin-left:30px;padding:60px 40px;border-radius:10px;background-color:var(--beige);}
 .section-inner .study-desc-wrap .info-list{margin-bottom:40px;}
 .section-inner .study-desc-wrap .info-list li:after{top:8px;}
 
@@ -223,7 +223,7 @@
 
     /* study */
     .study .section-inner .study-media-wrap{width:100%;margin-bottom:30px;}
-
+    .study-media-wrap .media-wrap .img-box:after{width:40px;height:40px;}
 
     /* project */
     .project-list-wrap .project-list{flex-direction:column;}
