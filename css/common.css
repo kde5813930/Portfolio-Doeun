@@ -142,7 +142,7 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 /*:*:*:*:*:*:*: phone  *:*:*:*:*:*:*:*/
 @media all and (min-width:0) and (max-width:767px) {
     /* html */
-    html{overflow-x:hidden}
+    body{overflow-x:hidden}
 
     /* section */
     .section{padding:80px 15px 80px;}
