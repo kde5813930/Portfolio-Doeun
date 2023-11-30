@@ -85,15 +85,18 @@ const media = document.querySelector('.media-wrap');
 media.addEventListener("click", (e) => {
     const target = e.currentTarget
     const url = target.getAttribute("data-url")
-    const iframe = target.querySelector('iframe');
+    const video = target.querySelector('video');
     const img = target.querySelector('.img-box');
 
-    console.log(img)
-
-    iframe.setAttribute("src", url)
+    video.setAttribute("src", url)
     img.style.display = "none";
 
+    // 동영상 종료 후 섬네일 이미지 다시 보이기
+    video.addEventListener("ended", () => {
+        img.style.display = "block";
+    })
 });
+
 
 
 //go-top
