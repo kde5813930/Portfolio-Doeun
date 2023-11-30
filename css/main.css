@@ -29,15 +29,16 @@
 .main-tit-wrap .main-tit span{position:absolute;bottom:-240px;left:0;font-size:13rem;font-weight:500;display:inline-block;width:100%;
     -webkit-background-clip: text;
     color: transparent;
+    background-color:var(--blue);
     background-image: linear-gradient(
             180deg,
             #dfdfdf 9%,
             #dddddd 22%,
             #e8e2c8 39%,
             #e8d8b7 54%,
-            #bad0f2 69%,
-            #a8b8e2 86%,
-            #86a4c9
+            #c3d1e1 69%,
+            var(--blue) 86%,
+            #a3b3c6
     );
     background-size: 100% 300%;
     background-position-y: 0;
@@ -97,13 +98,31 @@
 
 @keyframes gradient {
     from {
-        background-position-y: 0%;
+        background-position-y: 0;
     }
     to {
         background-position-y: 100%;
     }
 }
 
+@keyframes gradient-v2 {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 100%;
+    }
+
+
+    0% {
+        top:3px;
+        opacity:1;
+    }
+    100% {
+        top:calc(100% - 10px);
+        opacity:0;
+    }
+}
 
 
 @media all and (min-width:0) and (max-width:767px) {

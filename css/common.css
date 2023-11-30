@@ -193,6 +193,5 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 
     /* hover */
     .go-top-wrap .go-top:hover{border-color:transparent;background-color:var(--blue);}
-
     .btn-primary:hover .btn-underline:after{width:100%;}
 }

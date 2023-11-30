@@ -14,9 +14,7 @@
 
 .about-wrap .about-content .about-info-list{width:calc(100% - 600px);height:100%;padding-top:250px;}
 
-.about-content .about-info-list .about-info{padding:50px 35px;border-radius:15px;
-    background: rgb(239,232,218);
-    background: linear-gradient(135deg, rgba(239,232,218,1) 40%, rgba(248,248,248,1) 63%, rgba(191,214,240,1) 95%);}
+.about-content .about-info-list .about-info{padding:50px 35px;border-radius:15px;background-color:var(--beige)}
 .about-content .about-info-list .about-info:not(:last-child){margin-bottom:45px;}
 
 .about-info-list .about-info .info-title{position:relative;margin-bottom:30px;padding-left:30px;font-size:2rem;}
@@ -281,8 +279,10 @@
     /* hover */
     .project-list .project-box .box-inner:hover{
         border-color:var(--blue);
-        background: rgb(255,255,255);
-        background: linear-gradient(145deg, rgba(255,255,255,1) 15%, rgba(228,231,236,1) 61%, rgba(241,234,209,1) 100%);
-        transition:background .3s;}
+        background: rgb(175,192,212);
+        background: linear-gradient(150deg, rgba(175,192,212,1) 2%, rgba(242,242,243,1) 40%, rgba(239,239,240,1) 65%, rgba(248,241,156,1) 100%);
+        transition:background .3s
+    }
 
+    .project-list .project-box:hover .box-inner:before{background-image:url('../images/project/icon_folder_acitve.svg');}
 }
