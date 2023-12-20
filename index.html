@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
-    <link rel="stylesheet"  media="screen and (max-width: 767px)" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet"  media="screen and (max-width: 766px)" href="./css/swiper-bundle.min.css">
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/swiper.min.js"></script>
     <script src="./assets/aos.js"></script>
@@ -369,6 +369,48 @@
             subTitle_3.style.transform = `translateY(0)`;
         }
     });
+
+    //서브 타이틀 스크롤 모바일 스크립트
+    function subTitMobile(wid) {
+        const home = document.querySelector(".home");
+        const subTit = document.querySelector(".sub-tit");
+
+        if (wid <= 767){
+            window.addEventListener("scroll", () => {
+                let winTop = window.pageYOffset;
+                let winH = window.innerHeight;
+                let homeHei = home.clientHeight;
+                let homeEndPoint = homeHei - winH;
+
+                // let subTitOpacity = winTop * -1/300 + 37/3
+                let subTitTop = winTop * -7/8 + 2625
+
+                // console.log(winTop)
+                // console.log(subTitTop)
+
+                if (winTop >= homeEndPoint){
+                    console.log("dd")
+                    subTit.style.top = `${subTitTop}px`;
+                } else{
+                    subTit.style.top = `${0}px`;
+                }
+
+                // if (winTop >= 3400){
+                //     subTit.style.opacity = subTitOpacity;
+                // }
+            });
+        }
+    }
+
+    window.addEventListener("load", () => {
+        let winW = window.innerWidth;
+        subTitMobile(winW);
+    });
+    window.addEventListener("resize", () => {
+        let winW = window.innerWidth;
+        subTitMobile(winW);
+    });
+
 
     //리로드시 메인타이틀 show/hide 및 헤더 블러처리
     window.addEventListener("load", () => {
