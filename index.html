@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
-    <link rel="stylesheet"  media="screen and (max-width: 766px)" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet"  media="screen and (max-width: 767px)" href="./css/swiper-bundle.min.css">
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/swiper.min.js"></script>
     <script src="./assets/aos.js"></script>
@@ -154,10 +154,12 @@
                                         </div>
                                     </li>
                                     <li class="about-info swiper-slide">
-                                        <h4 class="info-title info-resume">MY Resume</h4>
+                                        <h4 class="info-title info-resume">MY Resume & Career Description</h4>
                                         <div class="info-btn-wrap">
                                             <a href="https://www.notion.so/KIM-DOEUN-dc5c044646f8423ba6797672fd6199bf?pvs=4" target="_blank" class="btn-primary">
-                                                <span class="btn-underline">이력서 보기 🙌</span></a>
+                                                <span class="btn-underline">이력서 바로 가기 🙌</span></a>
+                                            <a href="./file/kim_doeun_career_description.pdf" target="_blank" class="btn-primary">
+                                                <span class="btn-underline">경력 기술서 보기 💻</span></a>
                                         </div>
                                     </li>
                                 </ul>
@@ -393,10 +395,9 @@
         }
     }
 
-    window.addEventListener("load", () => {
-        let winW = window.innerWidth;
-        subTitMobile(winW);
-    });
+    let winW = window.innerWidth;
+    subTitMobile(winW);
+
     window.addEventListener("resize", () => {
         let winW = window.innerWidth;
         subTitMobile(winW);
