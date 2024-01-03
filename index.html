@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/aos.css">
-    <link rel="stylesheet"  media="screen and (max-width: 767px)" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <script src="./assets/jquery-3.6.0.min.js"></script>
     <script src="./assets/swiper.min.js"></script>
     <script src="./assets/aos.js"></script>
@@ -65,8 +65,8 @@
                         </div>
                         <div class="sub-tit">
                             <p class="no-1">안녕하세요🖐</p>
-                            <p class="no-2">기억에 남는 UX를 만드는</p>
-                            <p class="no-3">UI 개발자 김도은 입니다.</p>
+                            <p class="no-2">발전하는 UI 개발자</p>
+                            <p class="no-3">김도은 입니다.</p>
                         </div>
                         <div class="scroll-wrap"></div>
                     </section>
@@ -75,7 +75,7 @@
                     <div id="About" class="about">
                         <div class="about-bg"></div>
                         <div class="about-wrap section-inner">
-                            <div class="about-content swiper-container" data-aos="fade-up">
+                            <div class="about-content about-swiper-container" data-aos="fade-up">
                                 <div class="about-title-wrap">
                                     <h3 class="main-title">About Me</h3>
                                     <div class="img-profile-wrap"><img src="./images/project/bg_profile.jpg" alt="김도은 프로필 사진" class="img-profile"></div>
@@ -123,7 +123,7 @@
                                         </div>
                                     </li>
                                     <li class="about-info swiper-slide">
-                                        <h4  class="info-title info-history-desc">History description</h4>
+                                        <h4  class="info-title info-history-desc">이직을 결심한 이유</h4>
                                         <p class="desc">
                                             과거에 저는 여행사 항공 예약/발권 업무를 담당하여 항공시스템을 다루는 업무를 담당 하였습니다.
                                             자연스레 시스템적인 부분에서 개발분야 동료들과 소통하며 개발직군에 대한 관심을 갖게되었고, 도전하게 되었습니다.
@@ -208,27 +208,53 @@
                     </section>
                     <section id="Study" class="study section">
                         <h2 class="main-title" data-aos="fade-up">Study</h2>
-                        <div class="section-inner">
-                            <div class="study-media-wrap" data-aos="fade-right" data-aos-delay="200">
-                                <div class="media-wrap" data-url="./media/Todo-List.mp4">
-                                    <div class="img-box"></div>
-                                    <div class="media-box">
-                                        <video class="media" src="" autoplay muted></video>
+                        <div class="section-inner slide-wrap">
+                            <div class="study-content-box slide" data-aos="fade-up" data-aos-delay="300">
+                                <div class="study-media-wrap">
+                                    <div class="media-wrap media01" data-url="./media/youtube-project.mp4">
+                                        <div class="img-box"></div>
+                                        <div class="media-box">
+                                            <video class="media" src="" autoplay muted></video>
+                                        </div>
                                     </div>
                                 </div>
+                                <article class="study-desc-wrap">
+                                    <h2 class="sub-title">📺 YouTube Project</h2>
+                                    <ul class="info-list">
+                                        <li><span class="highlight">React js</span> 기반으로 현재 공부 및 작업중인 프로젝트 입니다.</li>
+                                        <li><span class="highlight">taillwind</span>를 이용하여 스타일 하였습니다.</li>
+                                        <li><span class="highlight">동영상 검색하기</span> 및 <span class="highlight">상세페이지</span>로 이동하는 기능들이 있습니다.</li>
+                                        <li><span class="highlight">react query</span> 를 사용하여 성능 개선에 대해 배우고 있습니다.</li>
+                                    </ul>
+                                    <div class="btn-wrap">
+                                        <a href="https://kde5813930.github.io/youtube-project/" target="_blank" class="btn-primary"><span class="btn-underline">사이트 이동하기 🙋‍♀</span></a>
+                                    </div>
+                                </article>
                             </div>
-                            <article class="study-desc-wrap" data-aos="fade-left" data-aos-delay="200">
-                                <h2 class="sub-title">📃 TODO LIST APP</h2>
-                                <ul class="info-list">
-                                    <li><span class="highlight">React js</span>로 작업한 개인 프로젝트 입니다.</li>
-                                    <li><span class="highlight">scss</span>를 이용하여 스타일 하였습니다.</li>
-                                    <li><span class="highlight">삭제하기</span>, <span class="highlight">필터링 기능</span>, 기존 데이터를 <span class="highlight">로컬스토리지에 저장</span>하는 기능 등을 구현해 보았습니다.</li>
-                                    <li><span class="highlight">context api</span>를 이용하여 <span class="highlight">다크모드 기능</span>을 구현 하였습니다.</li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    <a href="https://kde5813930.github.io/Todo-app/" target="_blank" class="btn-primary"><span class="btn-underline">사이트 이동하기 🙋‍♀</span></a>
+                            <div class="study-content-box slide" data-aos="fade-up" data-aos-delay="400">
+                                <div class="study-media-wrap">
+                                    <div class="media-wrap media02" data-url="./media/Todo-List.mp4">
+                                        <div class="img-box"></div>
+                                        <div class="media-box">
+                                            <video class="media" src="" autoplay muted></video>
+                                        </div>
+                                    </div>
                                 </div>
-                            </article>
+                                <article class="study-desc-wrap">
+                                    <h2 class="sub-title">📃 TODO LIST APP</h2>
+                                    <ul class="info-list">
+                                        <li><span class="highlight">React js</span>로 작업한 개인 프로젝트 입니다.</li>
+                                        <li><span class="highlight">scss</span>를 이용하여 스타일 하였습니다.</li>
+                                        <li><span class="highlight">삭제하기</span>, <span class="highlight">필터링 기능</span>, 기존 데이터를 <span class="highlight">로컬스토리지에 저장</span>하는 기능 등을 구현해 보았습니다.</li>
+                                        <li><span class="highlight">context api</span>를 이용하여 <span class="highlight">다크모드 기능</span>을 구현 하였습니다.</li>
+                                    </ul>
+                                    <div class="btn-wrap">
+                                        <a href="https://kde5813930.github.io/Todo-app/" target="_blank" class="btn-primary"><span class="btn-underline">사이트 이동하기 🙋‍♀</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <button type="button" class="slide-prev-btn slide-btn" data-aos="fade" data-aos-delay="400">prev btn</button>
+                            <button type="button" class="slide-next-btn slide-btn" data-aos="fade" data-aos-delay="400">prev btn</button>
                         </div>
                     </section>
                     <section id="Contact" class="contact section">
@@ -277,7 +303,7 @@
         </main>
         <footer class="footer">
             <div class="footer-inner">
-                <p class="ft-title">끝까지 스크롤 해주셔서 감사합니다!</p>
+                <div class="ft-title"><span class="flux">끝까지 봐주셔서 감사합니다 :)</span></div>
                 <ul class="ft-info-list">
                     <li>
                         <a href="https://github.com/kde5813930" target="_blank" class="git">깃허브</a>
@@ -492,14 +518,14 @@
 
     function initSwiper() {
         if (ww < 767 && mySwiper === undefined) {
-            mySwiper = new Swiper(".swiper-container", {
+            mySwiper = new Swiper(".about-swiper-container", {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 simulateTouch: true,
                 centeredSlides:true,
                 loop:true,
                 pagination: {
-                    el: '.swiper-container .swiper-pagination',
+                    el: '.about-swiper-container .swiper-pagination',
                     type: 'bullets',
                 },
             });

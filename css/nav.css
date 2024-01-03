@@ -9,10 +9,11 @@
 .gnb-list li .depth01{display:block;padding:0 15px;font-size:1.8rem;font-weight:500;height:80px;line-height:80px;}
 
 /* footer */
-.footer{background-color:var(--light-blue);}
+.footer{background-color:var(--dark-gray);}
 .footer .footer-inner{overflow: hidden;display:flex;flex-direction:column;align-items:center;max-width:1280px;width:100%;margin:0 auto;padding:150px 20px 75px;}
 
-.footer .footer-inner .ft-title{margin-bottom:60px;font-size:3rem;color:#fff;font-weight:500;}
+.footer .footer-inner .ft-title{width:100%;margin-bottom:100px;text-align:center;}
+.footer .footer-inner .ft-title .flux{font-weight:500;white-space:nowrap;}
 
 .footer .footer-inner .ft-info-list{display:flex;margin-bottom:30px;}
 .footer .footer-inner .ft-info-list li{width:55px;height:55px;margin-right:25px;}
@@ -23,10 +24,12 @@
 .footer .footer-inner .ft-info-list li .git{background-image:url(../images/footer/icon_github.svg);}
 .footer .footer-inner .ft-info-list li .notion{background-image:url(../images/footer/icon_notion.svg);}
 
+.footer .footer-inner .ft-info-list li .git:hover{background-image:url(../images/footer/icon_github_hover.svg);transform:scale(1.2);}
+.footer .footer-inner .ft-info-list li .notion:hover{background-image:url(../images/footer/icon_notion_hover.svg);transform:scale(1.2);}
+
 .footer .footer-inner .copyright{text-align:center;font-size:1.8rem;color:#fff;}
 
 .btn-hamburger{font-size:0;}
-
 
 
 /*:*:*:*:*:*:*: MOBILE  *:*:*:*:*:*:*:*/
@@ -58,8 +61,8 @@
     .btn-hamburger.active{background-image:url('../images/common/btn_close.svg');background-size:30px 30px;}
 
     /* footer */
-    .footer .footer-inner{padding:80px 15px 50px}
-    .footer .footer-inner .ft-title{margin-bottom:45px;font-size:1.8rem;}
+    .footer .footer-inner{padding:100px 15px 50px}
+    .footer .footer-inner .ft-title{margin-bottom:50px;}
     .footer .footer-inner .ft-info-list li{width:35px;height:35px;}
     .footer .footer-inner .copyright{font-size:1.4rem;}
 

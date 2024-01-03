@@ -80,22 +80,24 @@ document.addEventListener("click", (e) => {
 
 
 // 동영상 커버 클릭시 영상 재생
-const media = document.querySelector('.media-wrap');
+const media = document.querySelectorAll('.media-wrap');
 
-media.addEventListener("click", (e) => {
-    const target = e.currentTarget
-    const url = target.getAttribute("data-url")
-    const video = target.querySelector('video');
-    const img = target.querySelector('.img-box');
+media.forEach( (content) => {
+    content.addEventListener("click", (e) => {
+        const target = e.currentTarget
+        const url = target.getAttribute("data-url")
+        const video = target.querySelector('video');
+        const img = target.querySelector('.img-box');
 
-    video.setAttribute("src", url)
-    img.style.display = "none";
+        video.setAttribute("src", url)
+        img.style.display = "none";
 
-    // 동영상 종료 후 섬네일 이미지 다시 보이기
-    video.addEventListener("ended", () => {
-        img.style.display = "block";
-    })
-});
+        // 동영상 종료 후 섬네일 이미지 다시 보이기
+        video.addEventListener("ended", () => {
+            img.style.display = "block";
+        })
+    });
+})
 
 
 
@@ -160,6 +162,60 @@ function typing() {
     }
 }
 
+
+//커스텀 슬라이드
+const slideWrap = document.querySelector(".slide-wrap");
+let slideWidth = slideWrap.clientWidth;
+
+const prevBtn = document.querySelector(".slide-prev-btn");
+const nextBtn = document.querySelector(".slide-next-btn");
+
+const slide = document.querySelectorAll(".slide");
+
+const maxSlide = slide.length;
+
+let currSlide = 1;
+
+
+// next 버튼 클릭이벤트
+nextBtn.addEventListener("click", (e) => {
+    const target = e.target
+
+    currSlide++;
+    if (currSlide <= maxSlide) {
+        const offset = slideWidth * (currSlide - 1);
+        slide.forEach((i) => {
+            i.setAttribute("style", `left: ${-offset}px`);
+        });
+        prevBtn.classList.add("able");
+        target.classList.add("disabled")
+    } else {
+        target.classList.add("disabled")
+        currSlide--;
+    }
+});
+
+// prev 버튼 클릭이벤트
+prevBtn.addEventListener("click", (e) => {
+    const target = e.target
+
+    currSlide--;
+    nextBtn.classList.remove("disabled");
+
+    if (currSlide > 0) {
+        const offset = slideWidth * (currSlide - 1);
+        slide.forEach((i) => {
+            i.setAttribute("style", `left: ${-offset}px`);
+        });
+        target.classList.remove("able")
+    } else {
+        currSlide++;
+    }
+});
+
+window.addEventListener("resize", () => {
+    slideWidth = slideWrap.clientWidth;
+});
 
 
 goTop();

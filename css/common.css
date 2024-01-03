@@ -85,11 +85,46 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
 .go-top-wrap{opacity:0;position:fixed;right:40px;bottom:-1000px;z-index:1000;}
 .go-top-wrap.active{opacity:1;position:fixed;bottom:40px;transition:.6s;}
 .go-top-wrap.bottom{position:absolute;top:-100px;}
-.go-top-wrap .go-top{width:60px;height:60px;border-radius:50%;border:1px solid var(--gray);background:#a8a8a8 url('../images/common/go_top_arrow.svg') no-repeat center;font-size:0;transition:.3s;}
+.go-top-wrap .go-top{width:60px;height:60px;border-radius:50%;border:1px solid var(--gray);background:var(--gray) url('../images/common/go_top_arrow.svg') no-repeat center;font-size:0;transition:.3s;}
 
 /* 토스트 메세지 */
 .toast-message{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;padding:0 15px;background-color:var(--beige);color:var(--black);opacity:0;transition:0.3s;animation:2s ease-in 0s forwards toast;}
 .toast-message.fail{background-color:var(--dark-gray);color:#fff;}
+
+/* 커스텀 슬라이드 */
+.slide-wrap{overflow: hidden;display:flex;flex-wrap:nowrap;position:relative;width:100%;}
+.slide{display:flex;align-items:center;justify-content:center;position:relative;left:0;width:100%;flex-shrink:0;}
+.slide-btn{display:flex;justify-content:center;align-items:center;position:absolute;top:calc(50% - 16px);width:50px;height:50px;border-radius:100%;background:var(--gray
+) url('../images/common/btn_slide_arrow.svg') no-repeat center / 100% 100%;background-size:15px 18px;font-size:0;}
+
+.slide-btn.disabled{background-color:var(--light-gray)}
+.slide-btn.able{background-color:var(--gray)}
+
+.slide-prev-btn{left:0;background-color:var(--light-gray)}
+.slide-next-btn{right:0;transform:rotate(180deg) !important;}
+
+/* 네온사인 텍스트 효과 */
+.flux {color:#426DFB;font-size:3.5vw;line-height:1;text-shadow:0 0 3vw #2356FF;}
+
+.flux {
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+    0%,
+    100% {
+        text-shadow: 0 0 0.5vw #1041FF, 0 0 1.5vw #1041FF, 0 0 5vw #1041FF, 0 0 5vw #1041FF, 0 0 .2vw #8BFDFE, .25vw .25vw .05vw #147280;
+        color: #28D7FE;
+    }
+    50% {
+        text-shadow: 0 0 .25vw #082180, 0 0 .75vw #082180, 0 0 2.5vw #082180, 0 0 2.5vw #082180, 0 0 .1vw #082180, .25vw .25vw .05vw #0A3940;
+        color: #146C80;
+    }
+}
+
 
 @keyframes toast {
     0% {
@@ -177,6 +212,13 @@ background:var(--light-gray) url('../images/project/bg_shapes_02.png') right -16
     .modal-wrap .modal .btn-modal-close{top:20px;right:20px;width:25px;height:25px;}
 
     .modal-wrap .modal .btn-primary{margin:0 auto;width:100%;}
+
+    /* slide */
+    .slide-btn{width:40px;height:40px;}
+    .slide-prev-btn{top:0;left:auto;right:65px;}
+    .slide-next-btn{top:0;right:0;}
+
+    .flux {font-size:5.5vw;}
 
 }
 

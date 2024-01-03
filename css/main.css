@@ -1,6 +1,6 @@
 /* 메인(home) 페이지 */
-.main-wrap .home{position:relative;height:4000px;background-color:#efe8da;}
-.main-wrap .home .main-tit-wrap{opacity:0;display:none;align-items:center;justify-content:space-between;position:fixed;left:calc(50% - 640px);top:-15px;z-index:10;width:1280px;height:100vh;margin:0 auto;}
+.main-wrap .home{position:relative;height:4000px;background-color:#efe8da;overflow-x:unset;}
+.main-wrap .home .main-tit-wrap{overflow-x:hidden;overflow-y:auto;opacity:0;display:none;align-items:center;justify-content:space-between;position:fixed;left:calc(50% - 640px);top:-15px;z-index:10;width:1280px;height:100vh;margin:0 auto;}
 .main-wrap .home .main-tit-wrap.active{display:flex;}
 
 .main-tit-wrap .emoji-wrap{position:relative;z-index:1;padding:0 55px 0 70px;animation:fadeIn 1s both;animation-delay:.1s;}
