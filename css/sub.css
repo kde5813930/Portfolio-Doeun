@@ -81,13 +81,14 @@
 .study-content-box .study-media-wrap .media-wrap{position:relative;width:100%;height:0;padding-top:56.25%;z-index:100;}
 
 .study-media-wrap .media-wrap .img-box{background-size:100% 100%;background-repeat:no-repeat;z-index:10;}
-.study-media-wrap .media-wrap.media01 .img-box{background-image:url('../images/study/img_youtube.png');}
-.study-media-wrap .media-wrap.media02 .img-box{background-image:url('../images/study/img_todo_list.png');}
+.study-media-wrap .media-wrap.media01 .img-box{background-image:url('../images/study/img_todo_list.png');}
+.study-media-wrap .media-wrap.media02 .img-box{background-image:url('../images/study/img_youtube.png');}
+
 
 .study-media-wrap .media-wrap .img-box:after{content:'';position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%, -50%);z-index:100;background-repeat:no-repeat;background-size:100% 100%;}
 .study-media-wrap .media-wrap .img-box:hover:after{cursor:pointer;}
-.study-media-wrap .media-wrap.media01 .img-box:after{background-image:url('../images/study/icon_play_youtube.svg')}
-.study-media-wrap .media-wrap.media02 .img-box:after{background-image:url('../images/study/icon_play.svg')}
+.study-media-wrap .media-wrap.media01 .img-box:after{background-image:url('../images/study/icon_play.svg')}
+.study-media-wrap .media-wrap.media02 .img-box:after{background-image:url('../images/study/icon_play_youtube.svg')}
 
 .study-media-wrap .media-wrap .media-box video{z-index:1;}
 
